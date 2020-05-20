@@ -1,19 +1,21 @@
-package Shops;
+package shops;
 
 public class ClothsShop implements Shop {
 	private String shopName;
 	private int rent;
 	private int revenue;
+	private int shopFloorArea;
 	private final ShopCategory shopCategory = ShopCategory.CLOTHING;
 
 	public ClothsShop() {
 
 	}
 
-	public ClothsShop(String shopName, int rent, int revenue) {
+	public ClothsShop(String shopName, int rent, int revenue, int shopFloorArea) {
 		this.shopName = shopName;
 		this.rent = rent;
 		this.revenue = revenue;
+		this.shopFloorArea = shopFloorArea;
 	}
 
 	public ShopCategory getShopCategory() {
@@ -51,12 +53,22 @@ public class ClothsShop implements Shop {
 
 	@Override
 	public String toString() {
-		return "ClothsShop{" +
+		return "\n\t\tClothsShop{" +
 				"shopName='" + shopName + '\'' +
 				", rent=" + rent +
 				", revenue=" + revenue +
+				", shopFloorArea=" + shopFloorArea +
 				", shopCategory=" + shopCategory +
 				'}';
 	}
 
+	@Override
+	public int getShopFloorArea() {
+		return shopFloorArea;
+	}
+
+	public ClothsShop setShopFloorArea(int shopFloorArea) {
+		this.shopFloorArea = shopFloorArea;
+		return this;
+	}
 }

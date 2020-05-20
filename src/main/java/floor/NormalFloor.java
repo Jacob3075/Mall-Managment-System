@@ -1,6 +1,6 @@
 package floor;
 
-import Shops.Shop;
+import shops.Shop;
 
 import java.util.List;
 
