@@ -1,10 +1,13 @@
 package shops;
 
+import java.util.List;
+
 public class ClothsShop implements Shop {
 	private String shopName;
 	private int rent;
 	private int revenue;
 	private int shopFloorArea;
+	private List<Object> itemsOnSale;
 	private final ShopCategory shopCategory = ShopCategory.CLOTHING;
 
 	public ClothsShop() {
@@ -69,6 +72,17 @@ public class ClothsShop implements Shop {
 
 	public ClothsShop setShopFloorArea(int shopFloorArea) {
 		this.shopFloorArea = shopFloorArea;
+		return this;
+	}
+
+	@Override
+	public List<Object> getItemsOnSale() {
+		return itemsOnSale;
+	}
+
+	@Override
+	public ClothsShop addItemForSale(Object item) {
+		this.itemsOnSale.add(item);
 		return this;
 	}
 }

@@ -1,6 +1,8 @@
 package shops;
 
 
+import java.util.List;
+
 public interface Shop {
 	int getRent();
 
@@ -8,4 +10,7 @@ public interface Shop {
 
 	int getShopFloorArea();
 
+	List<Object> getItemsOnSale();
+
+	ClothsShop addItemForSale(Object item);
 }
