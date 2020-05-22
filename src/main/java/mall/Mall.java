@@ -1,3 +1,5 @@
+package mall;
+
 import floor.Floor;
 import mall.MallStates.MallState;
 
@@ -32,7 +34,7 @@ public class Mall {
 
 	@Override
 	public String toString() {
-		return "mall.MallStates.Mall{" +
+		return "mall.MallStates.mall.Mall{" +
 				"floors=" + floors +
 				'}';
 	}

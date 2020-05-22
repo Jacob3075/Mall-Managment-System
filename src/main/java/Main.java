@@ -1,5 +1,6 @@
 import floor.Floor;
 import floor.NormalFloor;
+import mall.Mall;
 import shops.ClothsShop;
 import shops.Shop;
 

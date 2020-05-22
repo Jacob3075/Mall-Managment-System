@@ -1,12 +1,13 @@
 package utils;
 
 import floor.Floor;
+
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class FloorsStream implements ForwardingStream<Floor> {
 
-	private Stream<Floor> stream;
-
+	private final Stream<Floor> stream;
 
 	public FloorsStream(Stream<Floor> stream) {
 		this.stream = stream;
@@ -17,8 +18,10 @@ public class FloorsStream implements ForwardingStream<Floor> {
 		return this.stream;
 	}
 
-	public Stream<Floor> newStream() {
-		return this.stream;
+	public IntStream getFloorsRevenue() {
+		return this.getStream()
+				.map(Floor::getRevenue)
+				.mapToInt(revenue -> revenue);
 	}
 
 	public IntStream getFloorsArea() {
