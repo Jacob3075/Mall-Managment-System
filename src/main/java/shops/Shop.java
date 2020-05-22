@@ -1,6 +1,8 @@
 package shops;
 
 
+import utils.ShopsStream;
+
 import java.util.List;
 
 public interface Shop {
@@ -13,4 +15,10 @@ public interface Shop {
 	List<Object> getItemsOnSale();
 
 	ClothsShop addItemForSale(Object item);
+
+	static ShopsStream stream(List<Shop> shops) {
+		return new ShopsStream(shops.stream());
+	}
+
+
 }

@@ -20,4 +20,17 @@ public class FloorsStream implements ForwardingStream<Floor> {
 	public Stream<Floor> newStream() {
 		return this.stream;
 	}
+
+	public IntStream getFloorsArea() {
+		return this.getStream()
+				.map(Floor::getTotalUsedSpace)
+				.mapToInt(usedSpace -> usedSpace);
+	}
+
+	public FloorsStream filterByArea(int area) {
+		return new FloorsStream(this.getStream()
+				.filter(floor -> floor.getTotalUsedSpace() < area)
+		);
+	}
+
 }

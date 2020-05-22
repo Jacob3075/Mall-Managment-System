@@ -1,7 +1,7 @@
-import shops.ClothsShop;
-import shops.Shop;
 import floor.Floor;
 import floor.NormalFloor;
+import shops.ClothsShop;
+import shops.Shop;
 
 import java.util.List;
 
@@ -24,11 +24,8 @@ public class Main {
 		Mall mall = new Mall(floors, 1000);
 
 		System.out.println("mall.getTotalRevenue() = " + mall.getTotalRevenue());
-		mall
-				.getFloors()
-				.stream()
-				.map((Floor::getFreeSpace))
-				.filter(floorSpace -> floorSpace < 100)
+		Floor.stream(mall.getFloors())
+				.filterByArea(100)
 				.forEach(System.out::println);
 		System.out.println("mall = " + mall);
 	}

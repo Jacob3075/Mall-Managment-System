@@ -2,18 +2,18 @@ package floor;
 
 import shops.Shop;
 
+import java.security.InvalidParameterException;
 import java.util.List;
 
-public class NormalFloor implements Floor{
+public class NormalFloor implements Floor {
 	private final int totalSpace = 100;
-	private List<Shop> shops;
+	private final List<Shop> shops;
 	private int revenue;
 
-	public NormalFloor() {
-
-	}
-
 	public NormalFloor(List<Shop> shops) {
+		if (Shop.stream(shops).totalUsedArea() > 100)
+			throw new InvalidParameterException("Total area by shops exceeds floor space");
+
 		this.shops = shops;
 	}
 
@@ -22,7 +22,6 @@ public class NormalFloor implements Floor{
 		return shops;
 	}
 
-
 	@Override
 	public NormalFloor addShop(Shop shop) {
 		this.shops.add(shop);
@@ -30,13 +29,16 @@ public class NormalFloor implements Floor{
 	}
 
 	@Override
-	public int getFreeSpace() {
-		int usedSpace = shops
-				.stream()
+	public int getTotalUsedSpace() {
+		return shops.stream()
 				.map(Shop::getShopFloorArea)
 				.mapToInt(floorArea -> floorArea)
 				.sum();
-		return totalSpace - usedSpace;
+	}
+
+	@Override
+	public int getFreeSpace() {
+		return totalSpace - this.getTotalUsedSpace();
 	}
 
 	@Override
@@ -46,8 +48,7 @@ public class NormalFloor implements Floor{
 
 	@Override
 	public int getRevenue() {
-		return shops
-				.stream()
+		return shops.stream()
 				.map(Shop::getRevenue)
 				.mapToInt(shopRevenue -> shopRevenue)
 				.sum();
@@ -58,7 +59,7 @@ public class NormalFloor implements Floor{
 		return "\n\tNormalFloor{" +
 				"totalSpace=" + totalSpace +
 				", revenue=" + revenue +
-				", shops=" + shops +
+				", com.jacob.shops=" + shops +
 				'}';
 	}
 }
