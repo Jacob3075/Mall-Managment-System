@@ -11,6 +11,8 @@ public interface MallState {
 
 	MallState constructMall();
 
+	MallState addFloor();
+
 	int getRevenue();
 
 	int getOperationCost();

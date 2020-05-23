@@ -41,4 +41,9 @@ public class OpenMall implements MallState {
 	public int getTotalRevenue() {
 		return 0;
 	}
+
+	@Override
+	public MallState addFloor() {
+		return null;
+	}
 }

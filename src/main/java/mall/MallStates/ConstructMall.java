@@ -38,6 +38,11 @@ public class ConstructMall implements MallState {
 	}
 
 	@Override
+	public MallState addFloor() {
+		return null;
+	}
+
+	@Override
 	public int getTotalRevenue() {
 		return 0;
 	}
