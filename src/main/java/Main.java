@@ -29,5 +29,11 @@ public class Main {
 				.filterByArea(100)
 				.forEach(System.out::println);
 		System.out.println("mall = " + mall);
+
+		Mall newMall = new Mall(floors, 1000);
+		newMall.addFloor(floor1);
+		System.out.println("newMall.getFloors() = " + newMall.getFloors());
+		newMall.openMall(1000);
+		newMall.closeMall();
 	}
 }

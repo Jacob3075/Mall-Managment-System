@@ -1,41 +1,57 @@
 package mall;
 
 import floor.Floor;
-import mall.MallStates.MallState;
+import mall.MallStates.*;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Mall {
 	private final List<Floor> floors;
-	private int revenue;
-	private final int operationCost;
+	private MallState mallState;
 
-	public Mall(List<Floor> floors, int operationCost) {
+	public Mall(List<Floor> floors, int constructionCost) {
 		this.floors = floors;
-		this.operationCost = operationCost;
+		this.mallState = new ConstructMall(constructionCost);
 	}
 
 	public List<Floor> getFloors() {
 		return floors;
 	}
 
-	public int getRevenue() {
-		return revenue;
+	public int getOperationCost(int operationCost) {
+		return this.mallState.getOperationCost();
 	}
 
-	public int getOperationCost() {
-		return operationCost;
+	public Integer getTotalRevenue() {
+		return Optional.of(Floor.stream(floors).getFloorsRevenue().sum()).orElse(0);
 	}
 
-	public int getTotalRevenue() {
-		if (floors == null) return -1;
-		return Floor.stream(floors).getFloorsRevenue().sum();
+	public void addFloor(Floor floor) {
+		this.mallState = this.mallState.addFloor(floor);
+	}
+
+	public void renovateMall(int operationCost) {
+		this.mallState = this.mallState.renovateMall(operationCost);
+	}
+
+	public void maintainMall(int maintenanceCost) {
+		this.mallState = this.mallState.maintainMall(maintenanceCost);
+	}
+
+	public void closeMall() {
+		this.mallState = this.mallState.closeMall();
+	}
+
+	public void openMall(int operationCost) {
+		this.mallState = this.mallState.openMall(operationCost);
 	}
 
 	@Override
 	public String toString() {
-		return "mall.MallStates.mall.Mall{" +
+		return "Mall{" +
 				"floors=" + floors +
+				", mallState=" + mallState +
 				'}';
 	}
 }

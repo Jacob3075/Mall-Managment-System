@@ -1,21 +1,23 @@
 package mall.MallStates;
 
+import floor.Floor;
+
 public interface MallState {
 	MallState closeMall();
 
-	MallState openMall();
+	MallState openMall(int operationCost);
 
-	MallState renovateMall();
+	MallState renovateMall(int operationCost);
 
-	MallState maintainMall();
+	MallState maintainMall(int maintenanceCost);
 
-	MallState constructMall();
+	MallState addFloor(Floor floor);
 
 	MallState addFloor();
 
-	int getRevenue();
-
-	int getOperationCost();
+	int getConstructionCost();
 
 	int getTotalRevenue();
+
+	int getOperationCost();
 }

@@ -1,6 +1,14 @@
 package mall.MallStates;
 
+import floor.Floor;
+
 public class OpenMall implements MallState {
+
+	private int operationCost;
+
+	public OpenMall(int operationCost) {
+		this.operationCost = operationCost;
+	}
 
 	@Override
 	public MallState closeMall() {
@@ -8,32 +16,27 @@ public class OpenMall implements MallState {
 	}
 
 	@Override
-	public MallState openMall() {
+	public MallState openMall(int operationCost) {
 		return this;
 	}
 
 	@Override
-	public MallState renovateMall() {
-		return new RenovateMall();
+	public MallState renovateMall(int operationCost) {
+		return new RenovateMall(operationCost);
 	}
 
 	@Override
-	public MallState maintainMall() {
-		return new MaintainMall();
+	public MallState maintainMall(int maintenanceCost) {
+		return new MaintainMall(maintenanceCost);
 	}
 
 	@Override
-	public MallState constructMall() {
-		return this;
+	public MallState addFloor(Floor floor) {
+		return null;
 	}
 
 	@Override
-	public int getRevenue() {
-		return 0;
-	}
-
-	@Override
-	public int getOperationCost() {
+	public int getConstructionCost() {
 		return 0;
 	}
 
@@ -45,5 +48,10 @@ public class OpenMall implements MallState {
 	@Override
 	public MallState addFloor() {
 		return null;
+	}
+
+	@Override
+	public int getOperationCost() {
+		return this.operationCost;
 	}
 }
