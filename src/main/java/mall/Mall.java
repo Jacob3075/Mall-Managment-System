@@ -1,7 +1,7 @@
 package mall;
 
 import floor.Floor;
-import mall.MallStates.*;
+import mall.mallstates.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public class Mall {
 		return floors;
 	}
 
-	public int getOperationCost(int operationCost) {
+	public int getOperationCost() {
 		return this.mallState.getOperationCost();
 	}
 

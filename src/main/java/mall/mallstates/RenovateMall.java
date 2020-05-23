@@ -1,27 +1,34 @@
-package mall.MallStates;
+package mall.mallstates;
 
 import floor.Floor;
 
-public class ClosedMall implements MallState {
+public class RenovateMall implements MallState {
+
+	private final int operationCost;
+
+	public RenovateMall(int operationCost) {
+
+		this.operationCost = operationCost;
+	}
 
 	@Override
 	public MallState closeMall() {
-		return this;
+		return new ClosedMall();
 	}
 
 	@Override
 	public MallState openMall(int operationCost) {
-		return new OpenMall(operationCost);
+		return new OpenMall(this.operationCost);
 	}
 
 	@Override
 	public MallState renovateMall(int operationCost) {
-		return null;
+		return this;
 	}
 
 	@Override
 	public MallState maintainMall(int maintenanceCost) {
-		return null;
+		return new MaintainMall(maintenanceCost);
 	}
 
 	@Override
@@ -31,7 +38,7 @@ public class ClosedMall implements MallState {
 
 	@Override
 	public int getConstructionCost() {
-		return 0;
+		return this.operationCost;
 	}
 
 	@Override
@@ -48,10 +55,4 @@ public class ClosedMall implements MallState {
 	public MallState addFloor() {
 		return null;
 	}
-
-	@Override
-	public String toString() {
-		return "Closed Mall";
-	}
-
 }
