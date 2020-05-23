@@ -47,5 +47,4 @@ public class FloorsStream implements ForwardingStream<Floor> {
 				.flatMap(Collection::stream)
 		);
 	}
-
 }

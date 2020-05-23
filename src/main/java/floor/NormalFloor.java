@@ -28,10 +28,7 @@ public class NormalFloor implements Floor {
 
 	@Override
 	public int getTotalUsedSpace() {
-		return shops.stream()
-				.map(Shop::getShopFloorArea)
-				.mapToInt(floorArea -> floorArea)
-				.sum();
+		return Shop.stream(shops).getTotalUsedSpace();
 	}
 
 	@Override
@@ -46,10 +43,7 @@ public class NormalFloor implements Floor {
 
 	@Override
 	public Integer getRevenue() {
-		return shops.stream()
-				.map(Shop::getRevenue)
-				.mapToInt(shopRevenue -> shopRevenue)
-				.sum();
+		return Shop.stream(shops).getRevenue();
 	}
 
 	@Override

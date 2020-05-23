@@ -10,7 +10,7 @@ public interface Shop {
 
 	int getRevenue();
 
-	int getShopFloorArea();
+	int getShopUsedArea();
 
 	List<Object> getItemsOnSale();
 

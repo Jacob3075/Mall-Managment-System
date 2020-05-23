@@ -18,9 +18,14 @@ public class ShopsStream implements ForwardingStream<Shop> {
 	}
 
 	public int totalUsedArea() {
-		return this.getStream()
-				.map(Shop::getShopFloorArea)
-				.mapToInt(i -> i)
-				.sum();
+		return this.mapToInt(Shop::getShopUsedArea).sum();
+	}
+
+	public int getRevenue() {
+		return this.mapToInt(Shop::getRevenue).sum();
+	}
+
+	public int getTotalUsedSpace() {
+		return this.mapToInt(Shop::getShopUsedArea).sum();
 	}
 }

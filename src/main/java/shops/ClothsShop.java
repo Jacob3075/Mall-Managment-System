@@ -66,13 +66,8 @@ public class ClothsShop implements Shop {
 	}
 
 	@Override
-	public int getShopFloorArea() {
+	public int getShopUsedArea() {
 		return shopFloorArea;
-	}
-
-	public ClothsShop setShopFloorArea(int shopFloorArea) {
-		this.shopFloorArea = shopFloorArea;
-		return this;
 	}
 
 	@Override
