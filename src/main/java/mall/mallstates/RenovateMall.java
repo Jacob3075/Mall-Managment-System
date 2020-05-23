@@ -1,6 +1,7 @@
 package mall.mallstates;
 
 import floor.Floor;
+import mall.Mall;
 
 public class RenovateMall implements MallState {
 
@@ -42,7 +43,7 @@ public class RenovateMall implements MallState {
 	}
 
 	@Override
-	public int getTotalRevenue() {
+	public int getTotalRevenue(Mall mall) {
 		return 0;
 	}
 

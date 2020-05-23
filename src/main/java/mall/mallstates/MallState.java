@@ -1,6 +1,9 @@
 package mall.mallstates;
 
 import floor.Floor;
+import mall.Mall;
+
+import java.util.function.Consumer;
 
 public interface MallState {
 	MallState closeMall();
@@ -11,13 +14,11 @@ public interface MallState {
 
 	MallState maintainMall(int maintenanceCost);
 
-	MallState addFloor(Floor floor);
-
-	MallState addFloor();
+	MallState addFloor(Floor floor, Consumer<Floor> floorConsumer);
 
 	int getConstructionCost();
 
-	int getTotalRevenue();
+	int getTotalRevenue(Mall mall);
 
 	int getOperationCost();
 }

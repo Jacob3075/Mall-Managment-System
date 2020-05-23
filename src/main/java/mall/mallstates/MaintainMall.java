@@ -1,6 +1,9 @@
 package mall.mallstates;
 
 import floor.Floor;
+import mall.Mall;
+
+import java.util.function.Consumer;
 
 public class MaintainMall implements MallState {
 
@@ -31,23 +34,23 @@ public class MaintainMall implements MallState {
 	}
 
 	@Override
-	public MallState addFloor(Floor floor) {
+	public MallState addFloor(Floor floor, Consumer<Floor> floorConsumer) {
 		return this;
 	}
 
 	@Override
 	public int getConstructionCost() {
-		return this.maintenanceCost;
+		return 0;
 	}
 
 	@Override
-	public int getTotalRevenue() {
+	public int getTotalRevenue(Mall mall) {
 		return 0;
 	}
 
 	@Override
 	public int getOperationCost() {
-		return 0;
+		return this.maintenanceCost;
 	}
 
 	@Override
@@ -57,8 +60,4 @@ public class MaintainMall implements MallState {
 				'}';
 	}
 
-	@Override
-	public MallState addFloor() {
-		return null;
-	}
 }

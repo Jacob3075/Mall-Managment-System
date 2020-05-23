@@ -22,10 +22,8 @@ public class NormalFloor implements Floor {
 		return shops;
 	}
 
-	@Override
-	public NormalFloor addShop(Shop shop) {
-		this.shops.add(shop);
-		return this;
+	public Floor addShop(Shop shop) {
+		return this.addShop(shop, this);
 	}
 
 	@Override
@@ -47,7 +45,7 @@ public class NormalFloor implements Floor {
 	}
 
 	@Override
-	public int getRevenue() {
+	public Integer getRevenue() {
 		return shops.stream()
 				.map(Shop::getRevenue)
 				.mapToInt(shopRevenue -> shopRevenue)

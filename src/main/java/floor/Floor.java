@@ -9,7 +9,10 @@ public interface Floor {
 
 	List<Shop> getShops();
 
-	NormalFloor addShop(Shop shop);
+	default Floor addShop(Shop shop, Floor floor) {
+		this.getShops().add(shop);
+		return this;
+	}
 
 	int getFreeSpace();
 
@@ -17,7 +20,7 @@ public interface Floor {
 
 	int getTotalUsedSpace();
 
-	int getRevenue();
+	Integer getRevenue();
 
 	static FloorsStream stream(List<Floor> floors) {
 		return new FloorsStream(floors.stream());

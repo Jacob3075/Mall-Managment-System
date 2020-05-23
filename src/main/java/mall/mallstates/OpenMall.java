@@ -1,6 +1,10 @@
 package mall.mallstates;
 
 import floor.Floor;
+import mall.Mall;
+
+import java.util.Optional;
+import java.util.function.Consumer;
 
 public class OpenMall implements MallState {
 
@@ -31,8 +35,8 @@ public class OpenMall implements MallState {
 	}
 
 	@Override
-	public MallState addFloor(Floor floor) {
-		return null;
+	public MallState addFloor(Floor floor, Consumer<Floor> floorConsumer) {
+		return this;
 	}
 
 	@Override
@@ -41,13 +45,8 @@ public class OpenMall implements MallState {
 	}
 
 	@Override
-	public int getTotalRevenue() {
-		return 0;
-	}
-
-	@Override
-	public MallState addFloor() {
-		return null;
+	public int getTotalRevenue(Mall mall) {
+		return Optional.of(Floor.stream(mall.getFloors()).getFloorsRevenue().sum()).orElse(0);
 	}
 
 	@Override
