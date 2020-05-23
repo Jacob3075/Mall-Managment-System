@@ -2,6 +2,7 @@ package utils;
 
 import floor.Floor;
 
+import java.util.Collection;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -19,20 +20,31 @@ public class FloorsStream implements ForwardingStream<Floor> {
 	}
 
 	public IntStream getFloorsRevenue() {
-		return this.getStream()
-				.map(Floor::getRevenue)
-				.mapToInt(revenue -> revenue);
+		return this.mapToInt(Floor::getRevenue);
 	}
 
-	public IntStream getFloorsArea() {
-		return this.getStream()
-				.map(Floor::getTotalUsedSpace)
-				.mapToInt(usedSpace -> usedSpace);
+	public int getTotalFloorsArea() {
+		return this.mapToInt(Floor::getTotalSpace).sum();
+	}
+
+	public int getFloorsUsedArea() {
+		return this.mapToInt(Floor::getTotalUsedSpace).sum();
+	}
+
+	public int getTotalFreeSpace() {
+		return this.getTotalFloorsArea() - this.getFloorsUsedArea();
 	}
 
 	public FloorsStream filterByArea(int area) {
 		return new FloorsStream(this.getStream()
 				.filter(floor -> floor.getTotalUsedSpace() < area)
+		);
+	}
+
+	public ShopsStream getShops() {
+		return new ShopsStream(this
+				.map(Floor::getShops)
+				.flatMap(Collection::stream)
 		);
 	}
 

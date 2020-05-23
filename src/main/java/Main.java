@@ -24,7 +24,7 @@ public class Main {
 
 		Mall mall = new Mall(floors, 1000);
 
-		System.out.println("mall.getTotalRevenue() = " + mall.getTotalRevenue());
+		System.out.println("mall.getTotalRevenue() = " + mall.getRevenue());
 		Floor.stream(mall.getFloors())
 				.filterByArea(100)
 				.forEach(System.out::println);

@@ -1,12 +1,14 @@
 package mall;
 
 import floor.Floor;
-import mall.mallstates.*;
+import mall.mallstates.ConstructMall;
+import mall.mallstates.MallState;
+import shops.Shop;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
-public class Mall {
+public class Mall implements Floor {
 	private final List<Floor> floors;
 	private MallState mallState;
 
@@ -23,12 +25,47 @@ public class Mall {
 		return this.mallState.getOperationCost();
 	}
 
-	public Integer getTotalRevenue() {
-		return Optional.of(Floor.stream(floors).getFloorsRevenue().sum()).orElse(0);
+	@Override
+	public List<Shop> getShops() {
+		return Floor.stream(floors)
+				.getShops()
+				.collect(Collectors.toList());
+	}
+
+	public Floor addShop(Shop shop, int floorLevel) {
+		return this.addShop(shop, floors.get(floorLevel));
+	}
+
+	@Override
+	public int getFreeSpace() {
+		return Floor.stream(floors).getTotalFreeSpace();
+	}
+
+	@Override
+	public int getTotalSpace() {
+		return Floor.stream(floors).getTotalFloorsArea();
+	}
+
+	@Override
+	public int getTotalUsedSpace() {
+		return Floor.stream(floors).getFloorsUsedArea();
+	}
+
+	@Override
+	public Integer getRevenue() {
+		return mallState.getTotalRevenue(this);
+	}
+
+	public int getConstructionCost() {
+		return mallState.getConstructionCost();
 	}
 
 	public void addFloor(Floor floor) {
-		this.mallState = this.mallState.addFloor(floor);
+		this.mallState = this.mallState.addFloor(floor, this::addNewFloor);
+	}
+
+	private void addNewFloor(Floor floor) {
+		this.floors.add(floor);
 	}
 
 	public void renovateMall(int operationCost) {
