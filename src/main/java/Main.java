@@ -5,6 +5,7 @@ import floor.NormalFloor;
 import mall.Mall;
 import shops.ClothsShop;
 import shops.Shop;
+import shops.ShopBuilder;
 
 import java.util.List;
 
@@ -46,5 +47,15 @@ public class Main {
 		System.out.println("newMall.getFloors() = " + newMall.getFloors());
 		newMall.openMall(1000);
 		newMall.closeMall();
+
+
+		Shop shop = new ShopBuilder(
+				"Name",
+				1000
+		)
+				.setRent(100)
+				.build();
+		System.out.println("shop = " + shop);
+
 	}
 }

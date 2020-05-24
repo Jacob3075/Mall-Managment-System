@@ -4,9 +4,10 @@ import employee_managment.Employee;
 import employee_managment.EmployeeManager;
 import floor.Floor;
 import shops.Shop;
-import states.mallstates.ConstructMall;
 import states.mallstates.MallState;
+import states.mallstates.OpenMall;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,9 +16,9 @@ public class Mall implements Floor {
 	private MallState mallState;
 	private EmployeeManager employeeManager;
 
-	public Mall(List<Floor> floors, int constructionCost, List<Employee> employees) {
+	public Mall(List<Floor> floors, int operationCost, List<Employee> employees) {
 		this.floors = floors;
-		this.mallState = new ConstructMall(constructionCost);
+		this.mallState = new OpenMall(operationCost);
 		this.employeeManager = new EmployeeManager(employees);
 	}
 
@@ -87,10 +88,6 @@ public class Mall implements Floor {
 		return mallState.getTotalRevenue(this);
 	}
 
-	public int getConstructionCost() {
-		return mallState.getConstructionCost();
-	}
-
 	public void addFloor(Floor floor) {
 		this.mallState = this.mallState.addFloor(floor, this::addNewFloor);
 	}
@@ -121,5 +118,29 @@ public class Mall implements Floor {
 				"floors=" + floors +
 				", mallState=" + mallState +
 				'}';
+	}
+
+	public static class Builder {
+		private final List<Floor> floors;
+		private int operationCost = 0;
+		private List<Employee> employees = new ArrayList<>();
+
+		public Builder(List<Floor> floors) {
+			this.floors = floors;
+		}
+
+		public Mall build() {
+			return new Mall(floors, operationCost, employees);
+		}
+
+		public Builder setConstructionCost(int operationCost) {
+			this.operationCost = operationCost;
+			return this;
+		}
+
+		public Builder setEmployees(List<Employee> employees) {
+			this.employees = employees;
+			return this;
+		}
 	}
 }

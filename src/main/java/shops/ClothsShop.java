@@ -10,12 +10,8 @@ public class ClothsShop implements Shop {
 	private String shopName;
 	private int rent;
 	private int revenue;
-	private int shopFloorArea;
+	private final int shopFloorArea;
 	private EmployeeManager employeeManager;
-
-	public ClothsShop() {
-
-	}
 
 	public ClothsShop(String shopName, int rent, int revenue, int shopFloorArea, List<Employee> employees) {
 		this.shopName = shopName;
@@ -52,11 +48,6 @@ public class ClothsShop implements Shop {
 	@Override
 	public int getRevenue() {
 		return revenue;
-	}
-
-	public Shop setRevenue(int revenue) {
-		this.revenue = revenue;
-		return this;
 	}
 
 	@Override
