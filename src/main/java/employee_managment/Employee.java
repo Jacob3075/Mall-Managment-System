@@ -1,5 +1,6 @@
 package employee_managment;
 
+import states.employee_state.EmployeeStates;
 import utils.EmployeeStream;
 
 import java.util.List;
@@ -14,4 +15,12 @@ public interface Employee {
 	void paidLeave();
 
 	void unpaidLeave();
+
+	void unEmployed();
+
+	EmployeeStates getStatus();
+
+	int getSalary();
+
+	int getWorkingHours();
 }

@@ -1,8 +1,8 @@
 package states.employee_state;
 
-public class UnPaidLeave implements EmployeeState {
+public class UnEmployed implements EmployeeState {
 
-	private final EmployeeStates status = EmployeeStates.UNPAIDLEAVE;
+	private final EmployeeStates status = EmployeeStates.UNEMPLOYED;
 
 	@Override
 	public EmployeeState working() {
@@ -16,21 +16,16 @@ public class UnPaidLeave implements EmployeeState {
 
 	@Override
 	public EmployeeState unPaidLeave() {
-		return this;
+		return new UnPaidLeave();
 	}
 
 	@Override
 	public EmployeeState unEmployed() {
-		return new UnEmployed();
+		return this;
 	}
 
 	@Override
 	public EmployeeStates getStatus() {
 		return status;
-	}
-
-	@Override
-	public String toString() {
-		return "UnPaidLeave";
 	}
 }

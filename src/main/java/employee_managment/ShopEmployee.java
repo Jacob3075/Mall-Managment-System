@@ -1,6 +1,7 @@
 package employee_managment;
 
 import states.employee_state.EmployeeState;
+import states.employee_state.EmployeeStates;
 import states.employee_state.Working;
 
 public class ShopEmployee implements Employee {
@@ -63,6 +64,16 @@ public class ShopEmployee implements Employee {
 	@Override
 	public void unpaidLeave() {
 		this.employeeState = this.employeeState.unPaidLeave();
+	}
+
+	@Override
+	public void unEmployed() {
+		this.employeeState = this.employeeState.unEmployed();
+	}
+
+	@Override
+	public EmployeeStates getStatus() {
+		return employeeState.getStatus();
 	}
 
 	@Override
