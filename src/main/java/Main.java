@@ -1,3 +1,4 @@
+import employee_managment.ShopEmployee;
 import floor.Floor;
 import floor.NormalFloor;
 import mall.Mall;
@@ -8,13 +9,22 @@ import java.util.List;
 
 public class Main {
 	public static void main(String[] args) {
+		List<ShopEmployee> employees1 = List.of(
+				new ShopEmployee("name1", 25, 2000, 6),
+				new ShopEmployee("name2", 25, 2000, 6)
+		);
+		List<ShopEmployee> employees2 = List.of(
+				new ShopEmployee("name3", 25, 2000, 6),
+				new ShopEmployee("name4", 25, 2000, 6)
+		);
+
 		List<Shop> shops1 = List.of(
-				new ClothsShop("Shop1", 100, 150, 50),
-				new ClothsShop("Shop2", 120, 170, 40)
+				new ClothsShop("Shop1", 100, 150, 50, employees1),
+				new ClothsShop("Shop2", 120, 170, 40, employees2)
 		);
 		List<Shop> shops2 = List.of(
-				new ClothsShop("Shop3", 100, 150, 20),
-				new ClothsShop("Shop4", 120, 170, 50)
+				new ClothsShop("Shop3", 100, 150, 20, employees1),
+				new ClothsShop("Shop4", 120, 170, 50, employees2)
 		);
 
 		Floor floor1 = new NormalFloor(shops1);

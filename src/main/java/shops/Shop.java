@@ -1,6 +1,7 @@
 package shops;
 
 
+import employee_managment.ShopEmployee;
 import utils.ShopsStream;
 
 import java.util.List;
@@ -12,13 +13,15 @@ public interface Shop {
 
 	int getShopUsedArea();
 
-	List<Object> getItemsOnSale();
+	List<ShopEmployee> getEmployees();
 
-	ClothsShop addItemForSale(Object item);
+	int getEmployeeCount();
+
+	Shop addEmployee(ShopEmployee employee);
+
+	Shop removeEmployee(ShopEmployee employee);
 
 	static ShopsStream stream(List<Shop> shops) {
 		return new ShopsStream(shops.stream());
 	}
-
-
 }

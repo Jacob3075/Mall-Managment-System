@@ -1,14 +1,16 @@
-package mall.mallstates;
+package states.mallstates;
 
 import floor.Floor;
 import mall.Mall;
 
-public class RenovateMall implements MallState {
+import java.util.Optional;
+import java.util.function.Consumer;
 
-	private final int operationCost;
+public class OpenMall implements MallState {
 
-	public RenovateMall(int operationCost) {
+	private int operationCost;
 
+	public OpenMall(int operationCost) {
 		this.operationCost = operationCost;
 	}
 
@@ -19,12 +21,12 @@ public class RenovateMall implements MallState {
 
 	@Override
 	public MallState openMall(int operationCost) {
-		return new OpenMall(this.operationCost);
+		return this;
 	}
 
 	@Override
 	public MallState renovateMall(int operationCost) {
-		return this;
+		return new RenovateMall(operationCost);
 	}
 
 	@Override
@@ -33,27 +35,22 @@ public class RenovateMall implements MallState {
 	}
 
 	@Override
-	public MallState addFloor(Floor floor) {
-		return null;
+	public MallState addFloor(Floor floor, Consumer<Floor> floorConsumer) {
+		return this;
 	}
 
 	@Override
 	public int getConstructionCost() {
-		return this.operationCost;
+		return 0;
 	}
 
 	@Override
 	public int getTotalRevenue(Mall mall) {
-		return 0;
+		return Optional.of(Floor.stream(mall.getFloors()).getFloorsRevenue().sum()).orElse(0);
 	}
 
 	@Override
 	public int getOperationCost() {
-		return 0;
-	}
-
-	@Override
-	public MallState addFloor() {
-		return null;
+		return this.operationCost;
 	}
 }

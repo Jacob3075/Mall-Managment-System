@@ -1,4 +1,4 @@
-package mall.mallstates;
+package states.mallstates;
 
 import floor.Floor;
 import mall.Mall;

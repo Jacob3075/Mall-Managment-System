@@ -1,9 +1,9 @@
 package mall;
 
 import floor.Floor;
-import mall.mallstates.ConstructMall;
-import mall.mallstates.MallState;
 import shops.Shop;
+import states.mallstates.ConstructMall;
+import states.mallstates.MallState;
 
 import java.util.List;
 import java.util.stream.Collectors;

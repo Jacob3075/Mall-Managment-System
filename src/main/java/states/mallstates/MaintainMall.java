@@ -1,17 +1,16 @@
-package mall.mallstates;
+package states.mallstates;
 
 import floor.Floor;
 import mall.Mall;
 
-import java.util.Optional;
 import java.util.function.Consumer;
 
-public class OpenMall implements MallState {
+public class MaintainMall implements MallState {
 
-	private int operationCost;
+	private final int maintenanceCost;
 
-	public OpenMall(int operationCost) {
-		this.operationCost = operationCost;
+	public MaintainMall(int maintenanceCost) {
+		this.maintenanceCost = maintenanceCost;
 	}
 
 	@Override
@@ -21,7 +20,7 @@ public class OpenMall implements MallState {
 
 	@Override
 	public MallState openMall(int operationCost) {
-		return this;
+		return new OpenMall(operationCost);
 	}
 
 	@Override
@@ -31,7 +30,7 @@ public class OpenMall implements MallState {
 
 	@Override
 	public MallState maintainMall(int maintenanceCost) {
-		return new MaintainMall(maintenanceCost);
+		return this;
 	}
 
 	@Override
@@ -46,11 +45,19 @@ public class OpenMall implements MallState {
 
 	@Override
 	public int getTotalRevenue(Mall mall) {
-		return Optional.of(Floor.stream(mall.getFloors()).getFloorsRevenue().sum()).orElse(0);
+		return 0;
 	}
 
 	@Override
 	public int getOperationCost() {
-		return this.operationCost;
+		return this.maintenanceCost;
 	}
+
+	@Override
+	public String toString() {
+		return "MaintainMall{" +
+				"maintenanceCost=" + maintenanceCost +
+				'}';
+	}
+
 }

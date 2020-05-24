@@ -1,15 +1,21 @@
-package mall.mallstates;
+package states.mallstates;
 
 import floor.Floor;
 import mall.Mall;
 
 import java.util.function.Consumer;
 
-public class ClosedMall implements MallState {
+public class ConstructMall implements MallState {
+
+	private final int constructionCost;
+
+	public ConstructMall(int constructionCost) {
+		this.constructionCost = constructionCost;
+	}
 
 	@Override
 	public MallState closeMall() {
-		return this;
+		return new ClosedMall();
 	}
 
 	@Override
@@ -19,22 +25,23 @@ public class ClosedMall implements MallState {
 
 	@Override
 	public MallState renovateMall(int operationCost) {
-		return null;
+		return this;
 	}
 
 	@Override
 	public MallState maintainMall(int maintenanceCost) {
-		return null;
+		return this;
 	}
 
 	@Override
 	public MallState addFloor(Floor floor, Consumer<Floor> floorConsumer) {
+		floorConsumer.accept(floor);
 		return this;
 	}
 
 	@Override
 	public int getConstructionCost() {
-		return 0;
+		return this.constructionCost;
 	}
 
 	@Override
@@ -49,7 +56,8 @@ public class ClosedMall implements MallState {
 
 	@Override
 	public String toString() {
-		return "Closed Mall";
+		return "\n\tConstructMall{" +
+				"constructionCost=" + constructionCost +
+				'}';
 	}
-
 }
