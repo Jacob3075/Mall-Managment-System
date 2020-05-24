@@ -35,12 +35,8 @@ public class MaintainMall implements MallState {
 
 	@Override
 	public MallState addFloor(Floor floor, Consumer<Floor> floorConsumer) {
+		floorConsumer.accept(floor);
 		return this;
-	}
-
-	@Override
-	public int getConstructionCost() {
-		return 0;
 	}
 
 	@Override

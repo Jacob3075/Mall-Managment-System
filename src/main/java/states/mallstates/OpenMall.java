@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 
 public class OpenMall implements MallState {
 
-	private int operationCost;
+	private final int operationCost;
 
 	public OpenMall(int operationCost) {
 		this.operationCost = operationCost;
@@ -37,11 +37,6 @@ public class OpenMall implements MallState {
 	@Override
 	public MallState addFloor(Floor floor, Consumer<Floor> floorConsumer) {
 		return this;
-	}
-
-	@Override
-	public int getConstructionCost() {
-		return 0;
 	}
 
 	@Override

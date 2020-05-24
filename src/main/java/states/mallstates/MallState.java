@@ -16,8 +16,6 @@ public interface MallState {
 
 	MallState addFloor(Floor floor, Consumer<Floor> floorConsumer);
 
-	int getConstructionCost();
-
 	int getTotalRevenue(Mall mall);
 
 	int getOperationCost();

@@ -19,22 +19,17 @@ public class ClosedMall implements MallState {
 
 	@Override
 	public MallState renovateMall(int operationCost) {
-		return null;
+		return new RenovateMall(operationCost);
 	}
 
 	@Override
 	public MallState maintainMall(int maintenanceCost) {
-		return null;
+		return new MaintainMall(maintenanceCost);
 	}
 
 	@Override
 	public MallState addFloor(Floor floor, Consumer<Floor> floorConsumer) {
 		return this;
-	}
-
-	@Override
-	public int getConstructionCost() {
-		return 0;
 	}
 
 	@Override
