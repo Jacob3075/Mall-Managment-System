@@ -1,3 +1,4 @@
+import employee_managment.Employee;
 import employee_managment.ShopEmployee;
 import floor.Floor;
 import floor.NormalFloor;
@@ -9,11 +10,11 @@ import java.util.List;
 
 public class Main {
 	public static void main(String[] args) {
-		List<ShopEmployee> employees1 = List.of(
+		List<Employee> employees1 = List.of(
 				new ShopEmployee("name1", 25, 2000, 6),
 				new ShopEmployee("name2", 25, 2000, 6)
 		);
-		List<ShopEmployee> employees2 = List.of(
+		List<Employee> employees2 = List.of(
 				new ShopEmployee("name3", 25, 2000, 6),
 				new ShopEmployee("name4", 25, 2000, 6)
 		);
@@ -32,7 +33,7 @@ public class Main {
 
 		List<Floor> floors = List.of(floor1, floor2);
 
-		Mall mall = new Mall(floors, 1000);
+		Mall mall = new Mall(floors, 1000, employees1);
 
 		System.out.println("mall.getTotalRevenue() = " + mall.getRevenue());
 		Floor.stream(mall.getFloors())
@@ -40,7 +41,7 @@ public class Main {
 				.forEach(System.out::println);
 		System.out.println("mall = " + mall);
 
-		Mall newMall = new Mall(floors, 1000);
+		Mall newMall = new Mall(floors, 1000, employees2);
 		newMall.addFloor(floor1);
 		System.out.println("newMall.getFloors() = " + newMall.getFloors());
 		newMall.openMall(1000);

@@ -1,11 +1,16 @@
 package floor;
 
+import employee_managment.Employee;
 import shops.Shop;
 import utils.FloorsStream;
 
 import java.util.List;
 
 public interface Floor {
+
+	static FloorsStream stream(List<Floor> floors) {
+		return new FloorsStream(floors.stream());
+	}
 
 	List<Shop> getShops();
 
@@ -22,7 +27,11 @@ public interface Floor {
 
 	Integer getRevenue();
 
-	static FloorsStream stream(List<Floor> floors) {
-		return new FloorsStream(floors.stream());
-	}
+	List<Employee> getEmployees();
+
+	int getEmployeesCount();
+
+	Floor addEmployee(Employee employee);
+
+	Floor removeEmployee(Employee employee);
 }

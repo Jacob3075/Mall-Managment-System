@@ -1,27 +1,29 @@
 package shops;
 
-import employee_managment.ShopEmployee;
+import employee_managment.Employee;
+import employee_managment.EmployeeManager;
 
 import java.util.List;
 
 public class ClothsShop implements Shop {
+	private final ShopCategory shopCategory = ShopCategory.CLOTHING;
 	private String shopName;
 	private int rent;
 	private int revenue;
 	private int shopFloorArea;
-	private List<ShopEmployee> employees;
-	private final ShopCategory shopCategory = ShopCategory.CLOTHING;
+	private EmployeeManager employeeManager;
 
 	public ClothsShop() {
 
 	}
 
-	public ClothsShop(String shopName, int rent, int revenue, int shopFloorArea, List<ShopEmployee> employees) {
+	public ClothsShop(String shopName, int rent, int revenue, int shopFloorArea, List<Employee> employees) {
 		this.shopName = shopName;
 		this.rent = rent;
 		this.revenue = revenue;
 		this.shopFloorArea = shopFloorArea;
-		this.employees = employees;
+		this.employeeManager = new EmployeeManager(employees);
+
 	}
 
 	public ShopCategory getShopCategory() {
@@ -63,41 +65,41 @@ public class ClothsShop implements Shop {
 	}
 
 	@Override
-	public List<ShopEmployee> getEmployees() {
-		return employees;
+	public List<Employee> getEmployees() {
+		return employeeManager.getEmployees();
 	}
 
-	public Shop setEmployees(List<ShopEmployee> employees) {
-		this.employees = employees;
+	public Shop setEmployees(List<Employee> employees) {
+		this.employeeManager = this.employeeManager.setEmployees(employees);
 		return this;
 	}
 
 	@Override
 	public int getEmployeeCount() {
-		return employees.size();
+		return this.employeeManager.getEmployees().size();
 	}
 
 	@Override
-	public Shop addEmployee(ShopEmployee employee) {
-		this.employees.add(employee);
+	public Shop addEmployee(Employee employee) {
+		this.employeeManager = this.employeeManager.addEmployee(employee);
 		return this;
 	}
 
 	@Override
-	public Shop removeEmployee(ShopEmployee employee) {
-		this.employees.remove(employee);
+	public Shop removeEmployee(Employee employee) {
+		this.employeeManager = this.employeeManager.removeEmployee(employee);
 		return this;
 	}
 
 	@Override
 	public String toString() {
 		return "\n\t\tClothsShop{" +
-				"shopName='" + shopName + '\'' +
+				"shopCategory=" + shopCategory +
+				", shopName='" + shopName + '\'' +
 				", rent=" + rent +
 				", revenue=" + revenue +
 				", shopFloorArea=" + shopFloorArea +
-				", shopCategory=" + shopCategory +
+				", employeeManager=" + employeeManager +
 				'}';
 	}
-
 }

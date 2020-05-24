@@ -1,5 +1,7 @@
 package mall;
 
+import employee_managment.Employee;
+import employee_managment.EmployeeManager;
 import floor.Floor;
 import shops.Shop;
 import states.mallstates.ConstructMall;
@@ -11,10 +13,39 @@ import java.util.stream.Collectors;
 public class Mall implements Floor {
 	private final List<Floor> floors;
 	private MallState mallState;
+	private EmployeeManager employeeManager;
 
-	public Mall(List<Floor> floors, int constructionCost) {
+	public Mall(List<Floor> floors, int constructionCost, List<Employee> employees) {
 		this.floors = floors;
 		this.mallState = new ConstructMall(constructionCost);
+		this.employeeManager = new EmployeeManager(employees);
+	}
+
+	@Override
+	public Floor addShop(Shop shop, Floor floor) {
+		return null;
+	}
+
+	@Override
+	public List<Employee> getEmployees() {
+		return this.employeeManager.getEmployees();
+	}
+
+	@Override
+	public int getEmployeesCount() {
+		return this.employeeManager.getEmployees().size();
+	}
+
+	@Override
+	public Floor addEmployee(Employee employee) {
+		this.employeeManager = this.employeeManager.addEmployee(employee);
+		return this;
+	}
+
+	@Override
+	public Floor removeEmployee(Employee employee) {
+		this.employeeManager = this.employeeManager.removeEmployee(employee);
+		return this;
 	}
 
 	public List<Floor> getFloors() {
