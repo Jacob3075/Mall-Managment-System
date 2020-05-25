@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/EmployeeState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/EmployeeState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/PaidLeave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/PaidLeave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/UnEmployed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/UnEmployed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/UnPaidLeave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/UnPaidLeave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/Working.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/Working.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/employee_managment/ShopEmployeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +79,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MallEmployeeTest">
+  <component name="RunManager" selected="JUnit.ShopEmployeeTest">
     <configuration name="MallEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mall Managment System" />
       <extension name="coverage">
@@ -110,22 +106,6 @@
       <option name="PACKAGE_NAME" value="employee_managment" />
       <option name="MAIN_CLASS_NAME" value="employee_managment.MallEmployeeTest" />
       <option name="METHOD_NAME" value="changingStateTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MallEmployeeTest.settersValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mall Managment System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="employee_managment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="employee_managment" />
-      <option name="MAIN_CLASS_NAME" value="employee_managment.MallEmployeeTest" />
-      <option name="METHOD_NAME" value="settersValidation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,13 +143,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShopEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mall Managment System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="employee_managment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="employee_managment" />
+      <option name="MAIN_CLASS_NAME" value="employee_managment.ShopEmployeeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShopEmployeeTest" />
         <item itemvalue="JUnit.MallEmployeeTest" />
         <item itemvalue="JUnit.MallEmployeeTest.changingStateTest" />
         <item itemvalue="JUnit.MallEmployeeTest.unEmployedTest" />
         <item itemvalue="JUnit.MallEmployeeTest.unPaidLeaveTest" />
-        <item itemvalue="JUnit.MallEmployeeTest.settersValidation" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +178,7 @@
       <workItem from="1590382562320" duration="836000" />
       <workItem from="1590383670534" duration="169000" />
       <workItem from="1590383896171" duration="3222000" />
-      <workItem from="1590421697760" duration="2965000" />
+      <workItem from="1590421697760" duration="3178000" />
     </task>
     <task id="LOCAL-00001" summary="Changed project to not use Maven">
       <created>1590384206671</created>
@@ -206,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590424522652</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Completed test for MallEmployee and made changes to EmployeeState">
+      <created>1590424730514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590424730514</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,10 +266,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="166" y="30" width="1024" height="738" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1590423713189" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1590422596046">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1590424894894">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.30.1366.738@0.30.1366.738" timestamp="1590422596046" />
+    <state width="498" height="446" key="SwitcherDM/0.30.1366.738@0.30.1366.738" timestamp="1590424894894" />
     <state x="278" y="135" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1590387039275">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -280,10 +282,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="392" y="293" width="572" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.30.1366.738@0.30.1366.738" timestamp="1590383197450" />
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590384251064">
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590424763165">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590384251064" />
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590424763165" />
     <state x="415" y="158" width="526" height="483" key="refactoring.ChangeSignatureDialog" timestamp="1590386618406">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
