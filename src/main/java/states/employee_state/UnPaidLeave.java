@@ -1,35 +1,30 @@
 package states.employee_state;
 
-import employee_managment.Employee;
+import java.util.function.IntSupplier;
 
 public class UnPaidLeave implements EmployeeState {
 
 	private final EmployeeStates status = EmployeeStates.UNPAIDLEAVE;
-	private final Employee employee;
 
-	public UnPaidLeave(Employee employee) {
 
-		this.employee = employee;
+	@Override
+	public EmployeeState working() {
+		return new Working();
 	}
 
 	@Override
-	public EmployeeState working(Employee employee) {
-		return new Working(employee);
+	public EmployeeState paidLeave() {
+		return new PaidLeave();
 	}
 
 	@Override
-	public EmployeeState paidLeave(Employee employee) {
-		return new PaidLeave(employee);
-	}
-
-	@Override
-	public EmployeeState unPaidLeave(Employee employee) {
+	public EmployeeState unPaidLeave() {
 		return this;
 	}
 
 	@Override
-	public EmployeeState unEmployed(Employee employee) {
-		return new UnEmployed(employee);
+	public EmployeeState unEmployed() {
+		return new UnEmployed();
 	}
 
 	@Override
@@ -38,18 +33,18 @@ public class UnPaidLeave implements EmployeeState {
 	}
 
 	@Override
-	public int getSalary() {
+	public int getSalary(IntSupplier intSupplier) {
 		return 0;
 	}
 
 	@Override
-	public int getWorkingHours() {
+	public int getWorkingHours(IntSupplier intSupplier) {
 		return 0;
 	}
 
 	@Override
-	public int getAge() {
-		return employee.getAge();
+	public int getAge(IntSupplier intSupplier) {
+		return intSupplier.getAsInt();
 	}
 
 	@Override

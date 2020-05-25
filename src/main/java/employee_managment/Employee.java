@@ -14,7 +14,7 @@ public interface Employee {
 
 	Employee paidLeave();
 
-	Employee unpaidLeave();
+	Employee unPaidLeave();
 
 	Employee unEmployed();
 

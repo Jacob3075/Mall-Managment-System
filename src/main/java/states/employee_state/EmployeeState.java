@@ -1,23 +1,23 @@
 package states.employee_state;
 
-import employee_managment.Employee;
+import java.util.function.IntSupplier;
 
 public interface EmployeeState {
 
-	EmployeeState working(Employee employee);
+	EmployeeState working();
 
-	EmployeeState paidLeave(Employee employee);
+	EmployeeState paidLeave();
 
-	EmployeeState unPaidLeave(Employee employee);
+	EmployeeState unPaidLeave();
 
-	EmployeeState unEmployed(Employee employee);
+	EmployeeState unEmployed();
 
 	EmployeeStates getStatus();
 
-	int getSalary();
+	int getSalary(IntSupplier intSupplier);
 
-	int getWorkingHours();
+	int getWorkingHours(IntSupplier intSupplier);
 
-	int getAge();
+	int getAge(IntSupplier intSupplier);
 
 }

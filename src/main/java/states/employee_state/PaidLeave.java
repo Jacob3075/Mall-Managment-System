@@ -1,34 +1,29 @@
 package states.employee_state;
 
-import employee_managment.Employee;
+import java.util.function.IntSupplier;
 
 public class PaidLeave implements EmployeeState {
 
 	private final EmployeeStates status = EmployeeStates.PAIDLEAVE;
-	private final Employee employee;
 
-	public PaidLeave(Employee employee) {
-		this.employee = employee;
+	@Override
+	public EmployeeState working() {
+		return new Working();
 	}
 
 	@Override
-	public EmployeeState working(Employee employee) {
-		return new Working(employee);
-	}
-
-	@Override
-	public EmployeeState paidLeave(Employee employee) {
+	public EmployeeState paidLeave() {
 		return this;
 	}
 
 	@Override
-	public EmployeeState unPaidLeave(Employee employee) {
-		return new UnPaidLeave(employee);
+	public EmployeeState unPaidLeave() {
+		return new UnPaidLeave();
 	}
 
 	@Override
-	public EmployeeState unEmployed(Employee employee) {
-		return new UnEmployed(employee);
+	public EmployeeState unEmployed() {
+		return new UnEmployed();
 	}
 
 	@Override
@@ -37,18 +32,18 @@ public class PaidLeave implements EmployeeState {
 	}
 
 	@Override
-	public int getSalary() {
-		return employee.getSalary();
+	public int getSalary(IntSupplier intSupplier) {
+		return intSupplier.getAsInt();
 	}
 
 	@Override
-	public int getWorkingHours() {
+	public int getWorkingHours(IntSupplier intSupplier) {
 		return 0;
 	}
 
 	@Override
-	public int getAge() {
-		return employee.getAge();
+	public int getAge(IntSupplier intSupplier) {
+		return intSupplier.getAsInt();
 	}
 
 	@Override

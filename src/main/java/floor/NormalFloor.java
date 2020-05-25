@@ -48,7 +48,8 @@ public class NormalFloor implements Floor {
 		return Shop.stream(shops).getRevenue();
 	}
 
-	//	TODO
+	//	TODO: Use singleton for mall employees
+
 	@Override
 	public List<Employee> getEmployees() {
 		return new ArrayList<>();

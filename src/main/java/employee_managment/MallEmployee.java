@@ -17,7 +17,7 @@ public class MallEmployee implements Employee {
 		this.age = age;
 		this.salary = salary;
 		this.workingHours = workingHours;
-		this.employeeState = new Working(this);
+		this.employeeState = new Working();
 	}
 
 	@Override
@@ -27,7 +27,11 @@ public class MallEmployee implements Employee {
 
 	@Override
 	public int getAge() {
-		return age;
+		return employeeState.getAge(this::showAge);
+	}
+
+	private int showAge() {
+		return this.age;
 	}
 
 	@Override
@@ -44,12 +48,20 @@ public class MallEmployee implements Employee {
 
 	@Override
 	public int getSalary() {
-		return salary;
+		return employeeState.getSalary(this::showSalary);
+	}
+
+	private int showSalary() {
+		return this.salary;
 	}
 
 	@Override
 	public int getWorkingHours() {
-		return workingHours;
+		return employeeState.getWorkingHours(this::showWorkingHours);
+	}
+
+	private int showWorkingHours() {
+		return this.workingHours;
 	}
 
 	@Override
@@ -60,25 +72,25 @@ public class MallEmployee implements Employee {
 
 	@Override
 	public Employee work() {
-		this.employeeState = this.employeeState.working(this);
+		this.employeeState = this.employeeState.working();
 		return this;
 	}
 
 	@Override
 	public Employee paidLeave() {
-		this.employeeState = this.employeeState.paidLeave(this);
+		this.employeeState = this.employeeState.paidLeave();
 		return this;
 	}
 
 	@Override
-	public Employee unpaidLeave() {
-		this.employeeState = this.employeeState.unPaidLeave(this);
+	public Employee unPaidLeave() {
+		this.employeeState = this.employeeState.unPaidLeave();
 		return this;
 	}
 
 	@Override
 	public Employee unEmployed() {
-		this.employeeState = this.employeeState.unEmployed(this);
+		this.employeeState = this.employeeState.unEmployed();
 		return this;
 	}
 
