@@ -24,3 +24,4 @@ hs_err_pid*
 /.idea/sonarlint/*
 /target/classes/META-INF/Mall Manegment System.kotlin_module
 /.idea/dictionaries/
+/.idea/workspace.xml

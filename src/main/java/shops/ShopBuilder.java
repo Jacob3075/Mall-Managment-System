@@ -2,7 +2,6 @@ package shops;
 
 import employee_managment.Employee;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ShopBuilder {
@@ -10,7 +9,7 @@ public class ShopBuilder {
 	private final int shopFloorArea;
 	private int rent = 0;
 	private int revenue = 0;
-	private List<Employee> employees = new ArrayList<>();
+	private List<Employee> employees = List.of();
 
 	public ShopBuilder(String shopName, int shopFloorArea) {
 		this.shopName = shopName;

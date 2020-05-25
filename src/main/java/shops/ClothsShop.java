@@ -7,13 +7,19 @@ import java.util.List;
 
 public class ClothsShop implements Shop {
 	private final ShopCategory shopCategory = ShopCategory.CLOTHING;
+	private final int revenue;
+	private final int shopFloorArea;
 	private String shopName;
 	private int rent;
-	private int revenue;
-	private final int shopFloorArea;
 	private EmployeeManager employeeManager;
 
-	public ClothsShop(String shopName, int rent, int revenue, int shopFloorArea, List<Employee> employees) {
+	public ClothsShop(
+			String shopName,
+			int rent,
+			int revenue,
+			int shopFloorArea,
+			List<Employee> employees
+	) {
 		this.shopName = shopName;
 		this.rent = rent;
 		this.revenue = revenue;

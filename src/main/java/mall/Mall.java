@@ -7,7 +7,6 @@ import shops.Shop;
 import states.mallstates.MallState;
 import states.mallstates.OpenMall;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -123,7 +122,7 @@ public class Mall implements Floor {
 	public static class Builder {
 		private final List<Floor> floors;
 		private int operationCost = 0;
-		private List<Employee> employees = new ArrayList<>();
+		private List<Employee> employees = List.of();
 
 		public Builder(List<Floor> floors) {
 			this.floors = floors;

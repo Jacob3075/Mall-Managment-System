@@ -1,12 +1,13 @@
 package employee_managment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeManager {
-	private List<Employee> employees;
+	private ArrayList<Employee> employees;
 
 	public EmployeeManager(List<Employee> employees) {
-		this.employees = employees;
+		this.employees = new ArrayList<>(employees);
 	}
 
 	public EmployeeManager addEmployee(Employee employee) {
@@ -24,7 +25,7 @@ public class EmployeeManager {
 	}
 
 	public EmployeeManager setEmployees(List<Employee> employees) {
-		this.employees = employees;
+		this.employees = new ArrayList<>(employees);
 		return this;
 	}
 

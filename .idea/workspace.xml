@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/employee_managment/ShopEmployeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee_managment/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee_managment/EmployeeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mall/Mall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mall/Mall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shops/ClothsShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shops/ClothsShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shops/ShopBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shops/ShopBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -79,7 +83,38 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShopEmployeeTest">
+  <component name="RunManager" selected="JUnit.EmployeeManagerTest.methodsTest">
+    <configuration name="EmployeeManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mall Managment System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="employee_managment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="employee_managment" />
+      <option name="MAIN_CLASS_NAME" value="employee_managment.EmployeeManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeManagerTest.methodsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mall Managment System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="employee_managment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="employee_managment" />
+      <option name="MAIN_CLASS_NAME" value="employee_managment.EmployeeManagerTest" />
+      <option name="METHOD_NAME" value="methodsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MallEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mall Managment System" />
       <extension name="coverage">
@@ -111,38 +146,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MallEmployeeTest.unEmployedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mall Managment System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="employee_managment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="employee_managment" />
-      <option name="MAIN_CLASS_NAME" value="employee_managment.MallEmployeeTest" />
-      <option name="METHOD_NAME" value="unEmployedTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MallEmployeeTest.unPaidLeaveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mall Managment System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="employee_managment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="employee_managment" />
-      <option name="MAIN_CLASS_NAME" value="employee_managment.MallEmployeeTest" />
-      <option name="METHOD_NAME" value="unPaidLeaveTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ShopEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mall Managment System" />
       <extension name="coverage">
@@ -160,13 +163,16 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeeManagerTest.methodsTest" />
+        <item itemvalue="JUnit.EmployeeManagerTest" />
         <item itemvalue="JUnit.ShopEmployeeTest" />
         <item itemvalue="JUnit.MallEmployeeTest" />
         <item itemvalue="JUnit.MallEmployeeTest.changingStateTest" />
-        <item itemvalue="JUnit.MallEmployeeTest.unEmployedTest" />
-        <item itemvalue="JUnit.MallEmployeeTest.unPaidLeaveTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -178,7 +184,8 @@
       <workItem from="1590382562320" duration="836000" />
       <workItem from="1590383670534" duration="169000" />
       <workItem from="1590383896171" duration="3222000" />
-      <workItem from="1590421697760" duration="3178000" />
+      <workItem from="1590421697760" duration="5442000" />
+      <workItem from="1590468736684" duration="1545000" />
     </task>
     <task id="LOCAL-00001" summary="Changed project to not use Maven">
       <created>1590384206671</created>
@@ -208,7 +215,35 @@
       <option name="project" value="LOCAL" />
       <updated>1590424730514</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Completed test for MallEmployee and made changes to EmployeeState">
+      <created>1590425112957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590425112957</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Completed test for ShopEmployee">
+      <created>1590425135856</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590425135856</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Created simple test for EmployeeManager and made changed all List&lt;&gt; to ArrayList&lt;&gt;()">
+      <created>1590427086445</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590427086445</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created simple test for EmployeeManager and made changed all List&lt;&gt; to ArrayList&lt;&gt;()">
+      <created>1590427105663</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590427105663</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +267,9 @@
     <MESSAGE value="Changed project to not use Maven" />
     <MESSAGE value="Changes to Employee interface and its implementations.&#10;Changes to EmployeeState interface and its implementations.&#10;Added simple test for MallEmployee" />
     <MESSAGE value="Completed test for MallEmployee and made changes to EmployeeState" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed test for MallEmployee and made changes to EmployeeState" />
+    <MESSAGE value="Completed test for ShopEmployee" />
+    <MESSAGE value="Created simple test for EmployeeManager and made changed all List&lt;&gt; to ArrayList&lt;&gt;()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created simple test for EmployeeManager and made changed all List&lt;&gt; to ArrayList&lt;&gt;()" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -242,34 +279,42 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="367" y="30" width="636" height="738" key="#Main/0.30.1366.738@0.30.1366.738" timestamp="1590383251432" />
+    <state x="100" y="130" width="1166" height="538" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1590427004197">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="100" y="130" width="1166" height="538" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.30.1366.738@0.30.1366.738" timestamp="1590427004197" />
     <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1590422817070">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1590422817070" />
-    <state width="1320" height="170" key="GridCell.Tab.0.bottom" timestamp="1590424496006">
+    <state width="1320" height="170" key="GridCell.Tab.0.bottom" timestamp="1590427184505">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="170" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1590424496006" />
-    <state width="1320" height="170" key="GridCell.Tab.0.center" timestamp="1590424496005">
+    <state width="1320" height="170" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1590427184505" />
+    <state width="1320" height="170" key="GridCell.Tab.0.center" timestamp="1590427184504">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="170" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1590424496005" />
-    <state width="1320" height="170" key="GridCell.Tab.0.left" timestamp="1590424496004">
+    <state width="1320" height="170" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1590427184503" />
+    <state width="1320" height="170" key="GridCell.Tab.0.left" timestamp="1590427184503">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="170" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1590424496004" />
-    <state width="1320" height="170" key="GridCell.Tab.0.right" timestamp="1590424496005">
+    <state width="1320" height="170" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1590427184503" />
+    <state width="1320" height="170" key="GridCell.Tab.0.right" timestamp="1590427184504">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="170" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1590424496005" />
-    <state x="166" y="30" width="1024" height="738" key="SettingsEditor" timestamp="1590423713189">
+    <state width="1320" height="170" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1590427184504" />
+    <state x="166" y="30" width="1024" height="738" key="SettingsEditor" timestamp="1590470273438">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="166" y="30" width="1024" height="738" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1590423713189" />
+    <state x="166" y="30" width="1024" height="738" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1590470273438" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1590424894894">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.30.1366.738@0.30.1366.738" timestamp="1590424894894" />
+    <state x="569" y="316" width="218" height="167" key="VCS.EditChangelistDialog" timestamp="1590426237303">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="569" y="316" width="218" height="167" key="VCS.EditChangelistDialog/0.30.1366.738@0.30.1366.738" timestamp="1590426237303" />
     <state x="278" y="135" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1590387039275">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -282,13 +327,17 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="392" y="293" width="572" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.30.1366.738@0.30.1366.738" timestamp="1590383197450" />
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590424763165">
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590425157097">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590424763165" />
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590425157097" />
     <state x="415" y="158" width="526" height="483" key="refactoring.ChangeSignatureDialog" timestamp="1590386618406">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="415" y="158" width="526" height="483" key="refactoring.ChangeSignatureDialog/0.30.1366.738@0.30.1366.738" timestamp="1590386618406" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1590469821950">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1590469821950" />
   </component>
 </project>
