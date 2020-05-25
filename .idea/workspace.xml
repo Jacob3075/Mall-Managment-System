@@ -20,27 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Mall Managment System.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/employee_managment/MallEmployeeTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jacob.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mall Manegment System.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/floor/NormalFloor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/floor/NormalFloor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Shops/ClothsShopTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee_managment/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee_managment/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee_managment/MallEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee_managment/MallEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/EmployeeState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/EmployeeState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/PaidLeave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/PaidLeave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/UnEmployed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/UnEmployed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/UnPaidLeave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/UnPaidLeave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/states/employee_state/Working.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/states/employee_state/Working.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,6 +67,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -85,7 +87,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MallEmployeeTest.settersValidation">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Mall Managment System" />
@@ -93,8 +95,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MallEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mall Managment System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="employee_managment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="employee_managment" />
+      <option name="MAIN_CLASS_NAME" value="employee_managment.MallEmployeeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallEmployeeTest.settersValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mall Managment System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="employee_managment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="employee_managment" />
+      <option name="MAIN_CLASS_NAME" value="employee_managment.MallEmployeeTest" />
+      <option name="METHOD_NAME" value="settersValidation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallEmployeeTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mall Managment System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="employee_managment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="employee_managment" />
+      <option name="MAIN_CLASS_NAME" value="employee_managment.MallEmployeeTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MallEmployeeTest.settersValidation" />
+        <item itemvalue="JUnit.MallEmployeeTest" />
+        <item itemvalue="JUnit.MallEmployeeTest.test" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -108,7 +160,16 @@
       <updated>1590382556356</updated>
       <workItem from="1590382562320" duration="836000" />
       <workItem from="1590383670534" duration="169000" />
+      <workItem from="1590383896171" duration="2983000" />
     </task>
+    <task id="LOCAL-00001" summary="Changed project to not use Maven">
+      <created>1590384206671</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590384206671</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,31 +187,48 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Changed project to not use Maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed project to not use Maven" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="367" y="30" width="636" height="738" key="#Main" timestamp="1590383251432">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="367" y="30" width="636" height="738" key="#Main/0.30.1366.738@0.30.1366.738" timestamp="1590383251432" />
-    <state width="1320" height="174" key="GridCell.Tab.0.bottom" timestamp="1590383413987">
+    <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1590386648478">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="174" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1590383413987" />
-    <state width="1320" height="174" key="GridCell.Tab.0.center" timestamp="1590383413987">
+    <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1590386648478" />
+    <state width="1320" height="171" key="GridCell.Tab.0.bottom" timestamp="1590384746138">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="174" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1590383413987" />
-    <state width="1320" height="174" key="GridCell.Tab.0.left" timestamp="1590383413986">
+    <state width="1320" height="171" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1590384746138" />
+    <state width="1320" height="171" key="GridCell.Tab.0.center" timestamp="1590384746137">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="174" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1590383413986" />
-    <state width="1320" height="174" key="GridCell.Tab.0.right" timestamp="1590383413987">
+    <state width="1320" height="171" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1590384746137" />
+    <state width="1320" height="171" key="GridCell.Tab.0.left" timestamp="1590384746137">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="174" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1590383413987" />
+    <state width="1320" height="171" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1590384746137" />
+    <state width="1320" height="171" key="GridCell.Tab.0.right" timestamp="1590384746138">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="1320" height="171" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1590384746138" />
     <state x="166" y="30" width="1024" height="738" key="SettingsEditor" timestamp="1590383815617">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="166" y="30" width="1024" height="738" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1590383815617" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1590386635786">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.30.1366.738@0.30.1366.738" timestamp="1590386635786" />
     <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog" timestamp="1590383111117">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -159,9 +237,13 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="392" y="293" width="572" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.30.1366.738@0.30.1366.738" timestamp="1590383197450" />
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590383186455">
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590384251064">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590383186455" />
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590384251064" />
+    <state x="415" y="158" width="526" height="483" key="refactoring.ChangeSignatureDialog" timestamp="1590386618406">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="415" y="158" width="526" height="483" key="refactoring.ChangeSignatureDialog/0.30.1366.738@0.30.1366.738" timestamp="1590386618406" />
   </component>
 </project>

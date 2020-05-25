@@ -10,17 +10,27 @@ public interface Employee {
 		return new EmployeeStream(employees.stream());
 	}
 
-	void work();
+	Employee work();
 
-	void paidLeave();
+	Employee paidLeave();
 
-	void unpaidLeave();
+	Employee unpaidLeave();
 
-	void unEmployed();
+	Employee unEmployed();
+
+	String getName();
 
 	EmployeeStates getStatus();
 
 	int getSalary();
 
+	Employee setSalary(int salary);
+
+	int getAge();
+
+	Employee setAge(int age);
+
 	int getWorkingHours();
+
+	Employee setWorkingHours(int workingHours);
 }
