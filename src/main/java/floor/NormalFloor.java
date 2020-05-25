@@ -1,8 +1,10 @@
 package floor;
 
+import employee_managment.Employee;
 import shops.Shop;
 
 import java.security.InvalidParameterException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class NormalFloor implements Floor {
@@ -44,6 +46,27 @@ public class NormalFloor implements Floor {
 	@Override
 	public Integer getRevenue() {
 		return Shop.stream(shops).getRevenue();
+	}
+
+	//	TODO
+	@Override
+	public List<Employee> getEmployees() {
+		return new ArrayList<>();
+	}
+
+	@Override
+	public int getEmployeesCount() {
+		return 0;
+	}
+
+	@Override
+	public Floor addEmployee(Employee employee) {
+		return null;
+	}
+
+	@Override
+	public Floor removeEmployee(Employee employee) {
+		return null;
 	}
 
 	@Override
