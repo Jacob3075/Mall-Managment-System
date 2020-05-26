@@ -46,12 +46,14 @@
         </files>
       </session>
       <session name="Tests">
-        <files focusedFile="$PROJECT_DIR$/src/test/java/floor/NormalFloorTest.java">
+        <files focusedFile="$PROJECT_DIR$/src/test/java/shops/ClothsShopTest.java">
+          <file>/Dummy.txt</file>
           <file>$PROJECT_DIR$/src/test/java/floor/NormalFloorTest.java</file>
           <file>$PROJECT_DIR$/src/test/java/mall/MallTest.java</file>
           <file>$PROJECT_DIR$/src/test/java/employee_managment/EmployeeManagerTest.java</file>
           <file>$PROJECT_DIR$/src/test/java/employee_managment/MallEmployeeTest.java</file>
           <file>$PROJECT_DIR$/src/test/java/employee_managment/ShopEmployeeTest.java</file>
+          <file>$PROJECT_DIR$/src/test/java/shops/ClothsShopTest.java</file>
         </files>
       </session>
     </sessions>

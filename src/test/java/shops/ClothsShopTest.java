@@ -40,4 +40,29 @@ class ClothsShopTest {
 		shop = shop.removeEmployee(shop.getEmployees().get(0));
 		assertEquals(4, shop.getEmployeeCount());
 	}
+
+	@Test
+	void usingShopBuilder() {
+		ShopBuilder shopBuilder = new ShopBuilder("Name", 30);
+		shopBuilder = shopBuilder.setRent(1000)
+		                         .setEmployees(Getters.shopEmployees)
+		                         .setRevenue(2000);
+		Shop shopFromBuilder = shopBuilder.buildClothsShop();
+		assertEquals(30, shopFromBuilder.getShopUsedArea());
+		assertEquals(4, shopFromBuilder.getEmployeeCount());
+		assertEquals(2000, shopFromBuilder.getRevenue());
+		assertEquals(1000, shopFromBuilder.getRent());
+		shopFromBuilder = shopFromBuilder.addEmployee(
+				new ShopEmployee(
+						"Name",
+						20,
+						1000,
+						6
+				)
+		);
+		assertEquals(5, shopFromBuilder.getEmployeeCount());
+		shopFromBuilder = shopFromBuilder.removeEmployee(shopFromBuilder.getEmployees().get(0));
+		assertEquals(4, shopFromBuilder.getEmployeeCount());
+
+	}
 }
