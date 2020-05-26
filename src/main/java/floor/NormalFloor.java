@@ -9,14 +9,14 @@ import java.util.List;
 
 public class NormalFloor implements Floor {
 	private final int totalSpace = 100;
-	private final List<Shop> shops;
+	private final ArrayList<Shop> shops;
 	private int revenue;
 
 	public NormalFloor(List<Shop> shops) {
 		if (Shop.stream(shops).totalUsedArea() > 100)
 			throw new InvalidParameterException("Total area by shops exceeds floor space");
 
-		this.shops = shops;
+		this.shops = new ArrayList<>(shops);
 	}
 
 	@Override
@@ -44,11 +44,11 @@ public class NormalFloor implements Floor {
 	}
 
 	@Override
-	public Integer getRevenue() {
+	public int getRevenue() {
 		return Shop.stream(shops).getRevenue();
 	}
 
-	//	TODO: Use singleton for mall employees
+	//	TODO: Singleton? Restructure EmployeeManager?
 
 	@Override
 	public List<Employee> getEmployees() {

@@ -22,11 +22,6 @@ public class Mall implements Floor {
 	}
 
 	@Override
-	public Floor addShop(Shop shop, Floor floor) {
-		return null;
-	}
-
-	@Override
 	public List<Employee> getEmployees() {
 		return this.employeeManager.getEmployees();
 	}
@@ -83,7 +78,7 @@ public class Mall implements Floor {
 	}
 
 	@Override
-	public Integer getRevenue() {
+	public int getRevenue() {
 		return mallState.getTotalRevenue(this);
 	}
 
