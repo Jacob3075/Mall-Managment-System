@@ -38,8 +38,8 @@ public class Main {
 
 		System.out.println("mall.getTotalRevenue() = " + mall.getRevenue());
 		Floor.stream(mall.getFloors())
-				.filterByArea(100)
-				.forEach(System.out::println);
+		     .filterByArea(100)
+		     .forEach(System.out::println);
 		System.out.println("mall = " + mall);
 
 		Mall newMall = new Mall(floors, 1000, employees2);
@@ -53,8 +53,8 @@ public class Main {
 				"Name",
 				1000
 		)
-				.setRent(100)
-				.build();
+				            .setRent(100)
+				            .build();
 		System.out.println("shop = " + shop);
 
 	}

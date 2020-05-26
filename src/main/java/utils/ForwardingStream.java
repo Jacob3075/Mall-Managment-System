@@ -8,12 +8,15 @@ import java.util.function.*;
 import java.util.stream.*;
 
 public interface ForwardingStream<T> extends Stream<T> {
-	Stream<T> getStream();
 
 	@Override
-
 	default Stream<T> filter(Predicate<? super T> predicate) {
 		return this.getStream().filter(predicate);
+	}
+
+	@Override
+	default <A> A[] toArray(IntFunction<A[]> generator) {
+		return this.getStream().toArray(generator);
 	}
 
 	@Override
@@ -101,10 +104,7 @@ public interface ForwardingStream<T> extends Stream<T> {
 		return this.getStream().toArray();
 	}
 
-	@Override
-	default <A> A[] toArray(IntFunction<A[]> generator) {
-		return (A[]) this.getStream().toArray(generator);
-	}
+	Stream<T> getStream();
 
 	@Override
 	default T reduce(T identity, BinaryOperator<T> accumulator) {

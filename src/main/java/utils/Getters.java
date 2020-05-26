@@ -24,13 +24,13 @@ public class Getters {
 			new ShopEmployee("Name3", 20, 1000, 6),
 			new ShopEmployee("Name4", 20, 1000, 6)
 	);
-	public static final List<Shop> shops = List.of(
+	public static final List<Shop>     shops         = List.of(
 			new ClothsShop("Shop1", 1000, 2000, 20, shopEmployees),
 			new ClothsShop("Shop2", 1000, 2000, 20, shopEmployees),
 			new ClothsShop("Shop3", 1000, 2000, 20, shopEmployees),
 			new ClothsShop("Shop4", 1000, 2000, 20, shopEmployees)
 	);
-	public static final List<Floor> floors = List.of(
+	public static final List<Floor>    floors        = List.of(
 			new NormalFloor(shops),
 			new NormalFloor(shops),
 			new NormalFloor(shops)

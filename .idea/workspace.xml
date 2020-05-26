@@ -20,12 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Getters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/floor/NormalFloorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mall/MallTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/floor/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/floor/Floor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee_managment/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee_managment/EmployeeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee_managment/MallEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee_managment/MallEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/floor/NormalFloor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/floor/NormalFloor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mall/Mall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mall/Mall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shops/ClothsShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shops/ClothsShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shops/ShopBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shops/ShopBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/FloorsStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/FloorsStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ForwardingStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ForwardingStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Getters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Getters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/employee_managment/MallEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/employee_managment/MallEmployeeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +49,14 @@
       <option value="module" />
     </option>
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -74,10 +88,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="mall" />
       <recent name="floor" />
       <recent name="employee_managment" />
     </key>
@@ -188,7 +203,7 @@
       <workItem from="1590383670534" duration="169000" />
       <workItem from="1590383896171" duration="3222000" />
       <workItem from="1590421697760" duration="5442000" />
-      <workItem from="1590468736684" duration="4571000" />
+      <workItem from="1590468736684" duration="6020000" />
     </task>
     <task id="LOCAL-00001" summary="Changed project to not use Maven">
       <created>1590384206671</created>
@@ -260,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590473290781</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Created simple test for NormalFloor and made some changes to Floor and NormalFloor.&#10;Added master Getters class in Utils to make it easier to create and use objects of Shop, Floor, Mall and Employees">
+      <created>1590473499209</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590473499209</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +330,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1590422817070" />
+    <state x="100" y="130" width="1166" height="538" key="DiffContextDialog" timestamp="1590474585130">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="100" y="130" width="1166" height="538" key="DiffContextDialog/0.30.1366.738@0.30.1366.738" timestamp="1590474585130" />
     <state width="1320" height="167" key="GridCell.Tab.0.bottom" timestamp="1590473200471">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -324,10 +350,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state width="1320" height="167" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1590473200471" />
-    <state x="166" y="30" width="1024" height="738" key="SettingsEditor" timestamp="1590470773841">
+    <state x="166" y="30" width="1024" height="738" key="SettingsEditor" timestamp="1590474412664">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="166" y="30" width="1024" height="738" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1590470773841" />
+    <state x="166" y="30" width="1024" height="738" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1590474412664" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1590424894894">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -348,10 +374,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="392" y="293" width="572" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.30.1366.738@0.30.1366.738" timestamp="1590383197450" />
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590470748343">
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590473575867">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590470748343" />
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590473575867" />
     <state x="415" y="158" width="526" height="483" key="refactoring.ChangeSignatureDialog" timestamp="1590386618406">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

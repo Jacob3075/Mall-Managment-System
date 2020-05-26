@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NormalFloor implements Floor {
-	private final int totalSpace = 100;
+	private final int             totalSpace = 100;
 	private final ArrayList<Shop> shops;
-	private int revenue;
+	private       int             revenue;
 
 	public NormalFloor(List<Shop> shops) {
 		if (Shop.stream(shops).totalUsedArea() > 100)
@@ -24,15 +24,6 @@ public class NormalFloor implements Floor {
 		return shops;
 	}
 
-	public Floor addShop(Shop shop) {
-		return this.addShop(shop, this);
-	}
-
-	@Override
-	public int getTotalUsedSpace() {
-		return Shop.stream(shops).getTotalUsedSpace();
-	}
-
 	@Override
 	public int getFreeSpace() {
 		return totalSpace - this.getTotalUsedSpace();
@@ -44,16 +35,21 @@ public class NormalFloor implements Floor {
 	}
 
 	@Override
+	public int getTotalUsedSpace() {
+		return Shop.stream(shops).getTotalUsedSpace();
+	}
+
+	@Override
 	public int getRevenue() {
 		return Shop.stream(shops).getRevenue();
 	}
-
-	//	TODO: Singleton? Restructure EmployeeManager?
 
 	@Override
 	public List<Employee> getEmployees() {
 		return new ArrayList<>();
 	}
+
+	//	TODO: Singleton? Restructure EmployeeManager?
 
 	@Override
 	public int getEmployeesCount() {
@@ -70,12 +66,16 @@ public class NormalFloor implements Floor {
 		return null;
 	}
 
+	public Floor addShop(Shop shop) {
+		return this.addShop(shop, this);
+	}
+
 	@Override
 	public String toString() {
 		return "\n\tNormalFloor{" +
-				"totalSpace=" + totalSpace +
-				", revenue=" + revenue +
-				", com.jacob.shops=" + shops +
-				'}';
+				       "totalSpace=" + totalSpace +
+				       ", revenue=" + revenue +
+				       ", com.jacob.shops=" + shops +
+				       '}';
 	}
 }

@@ -6,12 +6,12 @@ import employee_managment.EmployeeManager;
 import java.util.List;
 
 public class ClothsShop implements Shop {
-	private final ShopCategory shopCategory = ShopCategory.CLOTHING;
-	private final int revenue;
-	private final int shopFloorArea;
-	private String shopName;
-	private int rent;
-	private EmployeeManager employeeManager;
+	private final ShopCategory    shopCategory = ShopCategory.CLOTHING;
+	private final int             revenue;
+	private final int             shopFloorArea;
+	private       String          shopName;
+	private       int             rent;
+	private       EmployeeManager employeeManager;
 
 	public ClothsShop(
 			String shopName,
@@ -46,11 +46,6 @@ public class ClothsShop implements Shop {
 		return rent;
 	}
 
-	public Shop setRent(int rent) {
-		this.rent = rent;
-		return this;
-	}
-
 	@Override
 	public int getRevenue() {
 		return revenue;
@@ -64,11 +59,6 @@ public class ClothsShop implements Shop {
 	@Override
 	public List<Employee> getEmployees() {
 		return employeeManager.getEmployees();
-	}
-
-	public Shop setEmployees(List<Employee> employees) {
-		this.employeeManager = this.employeeManager.setEmployees(employees);
-		return this;
 	}
 
 	@Override
@@ -88,15 +78,25 @@ public class ClothsShop implements Shop {
 		return this;
 	}
 
+	public Shop setRent(int rent) {
+		this.rent = rent;
+		return this;
+	}
+
+	public Shop setEmployees(List<Employee> employees) {
+		this.employeeManager = this.employeeManager.setEmployees(employees);
+		return this;
+	}
+
 	@Override
 	public String toString() {
 		return "\n\t\tClothsShop{" +
-				"shopCategory=" + shopCategory +
-				", shopName='" + shopName + '\'' +
-				", rent=" + rent +
-				", revenue=" + revenue +
-				", shopFloorArea=" + shopFloorArea +
-				", employeeManager=" + employeeManager +
-				'}';
+				       "shopCategory=" + shopCategory +
+				       ", shopName='" + shopName + '\'' +
+				       ", rent=" + rent +
+				       ", revenue=" + revenue +
+				       ", shopFloorArea=" + shopFloorArea +
+				       ", employeeManager=" + employeeManager +
+				       '}';
 	}
 }

@@ -8,12 +8,11 @@ import states.employee_state.EmployeeStates;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MallEmployeeTest {
-	private static Employee mallEmployee;
-	private static final String name = "Name";
-	private static final int workingHours = 6;
-	private static final int salary = 1000;
-	private static final int age = 20;
-
+	private static final String   name         = "Name";
+	private static final int      workingHours = 6;
+	private static final int      salary       = 1000;
+	private static final int      age          = 20;
+	private static       Employee mallEmployee;
 
 	@BeforeAll
 	static void beforeAll() {
@@ -28,9 +27,9 @@ class MallEmployeeTest {
 	@BeforeEach
 	void setUp() {
 		mallEmployee = mallEmployee.setAge(age)
-				.setSalary(salary)
-				.setWorkingHours(workingHours)
-				.work();
+		                           .setSalary(salary)
+		                           .setWorkingHours(workingHours)
+		                           .work();
 	}
 
 	@Test
@@ -44,9 +43,9 @@ class MallEmployeeTest {
 	@Test
 	void settersValidation() {
 		mallEmployee = mallEmployee.setAge(21)
-				.setWorkingHours(8)
-				.setSalary(2000)
-				.paidLeave();
+		                           .setWorkingHours(8)
+		                           .setSalary(2000)
+		                           .paidLeave();
 		System.out.println("mallEmployee = " + mallEmployee);
 		assertEquals(21, mallEmployee.getAge());
 		assertEquals(2000, mallEmployee.getSalary());
@@ -84,16 +83,22 @@ class MallEmployeeTest {
 	@Test
 	void changingStateTest() {
 		assertEquals(EmployeeStates.WORKING, mallEmployee.getStatus());
+
 		mallEmployee = mallEmployee.paidLeave();
 		assertEquals(EmployeeStates.PAIDLEAVE, mallEmployee.getStatus());
+
 		mallEmployee = mallEmployee.unPaidLeave();
 		assertEquals(EmployeeStates.UNPAIDLEAVE, mallEmployee.getStatus());
+
 		mallEmployee = mallEmployee.unEmployed();
 		assertEquals(EmployeeStates.UNEMPLOYED, mallEmployee.getStatus());
+
 		mallEmployee = mallEmployee.paidLeave();
 		assertEquals(EmployeeStates.UNEMPLOYED, mallEmployee.getStatus());
+
 		mallEmployee = mallEmployee.unPaidLeave();
 		assertEquals(EmployeeStates.UNEMPLOYED, mallEmployee.getStatus());
+
 		mallEmployee = mallEmployee.work();
 		assertEquals(EmployeeStates.WORKING, mallEmployee.getStatus());
 	}

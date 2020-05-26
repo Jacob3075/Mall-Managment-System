@@ -11,14 +11,49 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Mall implements Floor {
-	private final List<Floor> floors;
-	private MallState mallState;
-	private EmployeeManager employeeManager;
+	private final List<Floor>     floors;
+	private       MallState       mallState;
+	private       EmployeeManager employeeManager;
 
 	public Mall(List<Floor> floors, int operationCost, List<Employee> employees) {
 		this.floors = floors;
 		this.mallState = new OpenMall(operationCost);
 		this.employeeManager = new EmployeeManager(employees);
+	}
+
+	public List<Floor> getFloors() {
+		return floors;
+	}
+
+	public int getOperationCost() {
+		return this.mallState.getOperationCost();
+	}
+
+	@Override
+	public List<Shop> getShops() {
+		return Floor.stream(floors)
+		            .getShops()
+		            .collect(Collectors.toList());
+	}
+
+	@Override
+	public int getFreeSpace() {
+		return Floor.stream(floors).getTotalFreeSpace();
+	}
+
+	@Override
+	public int getTotalSpace() {
+		return Floor.stream(floors).getTotalFloorsArea();
+	}
+
+	@Override
+	public int getTotalUsedSpace() {
+		return Floor.stream(floors).getFloorsUsedArea();
+	}
+
+	@Override
+	public int getRevenue() {
+		return mallState.getTotalRevenue(this);
 	}
 
 	@Override
@@ -43,43 +78,8 @@ public class Mall implements Floor {
 		return this;
 	}
 
-	public List<Floor> getFloors() {
-		return floors;
-	}
-
-	public int getOperationCost() {
-		return this.mallState.getOperationCost();
-	}
-
-	@Override
-	public List<Shop> getShops() {
-		return Floor.stream(floors)
-				.getShops()
-				.collect(Collectors.toList());
-	}
-
 	public Floor addShop(Shop shop, int floorLevel) {
 		return this.addShop(shop, floors.get(floorLevel));
-	}
-
-	@Override
-	public int getFreeSpace() {
-		return Floor.stream(floors).getTotalFreeSpace();
-	}
-
-	@Override
-	public int getTotalSpace() {
-		return Floor.stream(floors).getTotalFloorsArea();
-	}
-
-	@Override
-	public int getTotalUsedSpace() {
-		return Floor.stream(floors).getFloorsUsedArea();
-	}
-
-	@Override
-	public int getRevenue() {
-		return mallState.getTotalRevenue(this);
 	}
 
 	public void addFloor(Floor floor) {
@@ -109,15 +109,15 @@ public class Mall implements Floor {
 	@Override
 	public String toString() {
 		return "Mall{" +
-				"floors=" + floors +
-				", mallState=" + mallState +
-				'}';
+				       "floors=" + floors +
+				       ", mallState=" + mallState +
+				       '}';
 	}
 
 	public static class Builder {
-		private final List<Floor> floors;
-		private int operationCost = 0;
-		private List<Employee> employees = List.of();
+		private final List<Floor>    floors;
+		private       int            operationCost = 0;
+		private       List<Employee> employees     = List.of();
 
 		public Builder(List<Floor> floors) {
 			this.floors = floors;

@@ -14,13 +14,12 @@ public class FloorsStream implements ForwardingStream<Floor> {
 		this.stream = stream;
 	}
 
-	@Override
-	public Stream<Floor> getStream() {
-		return this.stream;
-	}
-
 	public IntStream getFloorsRevenue() {
 		return this.mapToInt(Floor::getRevenue);
+	}
+
+	public int getTotalFreeSpace() {
+		return this.getTotalFloorsArea() - this.getFloorsUsedArea();
 	}
 
 	public int getTotalFloorsArea() {
@@ -31,20 +30,21 @@ public class FloorsStream implements ForwardingStream<Floor> {
 		return this.mapToInt(Floor::getTotalUsedSpace).sum();
 	}
 
-	public int getTotalFreeSpace() {
-		return this.getTotalFloorsArea() - this.getFloorsUsedArea();
-	}
-
 	public FloorsStream filterByArea(int area) {
 		return new FloorsStream(this.getStream()
-				.filter(floor -> floor.getTotalUsedSpace() < area)
+		                            .filter(floor -> floor.getTotalUsedSpace() < area)
 		);
+	}
+
+	@Override
+	public Stream<Floor> getStream() {
+		return this.stream;
 	}
 
 	public ShopsStream getShops() {
 		return new ShopsStream(this
-				.map(Floor::getShops)
-				.flatMap(Collection::stream)
+				                       .map(Floor::getShops)
+				                       .flatMap(Collection::stream)
 		);
 	}
 }
