@@ -42,9 +42,8 @@ public class FloorsStream implements ForwardingStream<Floor> {
 	}
 
 	public ShopsStream getShops() {
-		return new ShopsStream(this
-				                       .map(Floor::getShops)
-				                       .flatMap(Collection::stream)
+		return new ShopsStream(this.map(Floor::getShops)
+		                           .flatMap(Collection::stream)
 		);
 	}
 }

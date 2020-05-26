@@ -7,18 +7,23 @@ import shops.Shop;
 import states.mallstates.MallState;
 import states.mallstates.OpenMall;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Mall implements Floor {
-	private final List<Floor>     floors;
-	private       MallState       mallState;
-	private       EmployeeManager employeeManager;
+	private final ArrayList<Floor> floors;
+	private       MallState        mallState;
+	private       EmployeeManager  employeeManager;
 
-	public Mall(List<Floor> floors, int operationCost, List<Employee> employees) {
-		this.floors = floors;
+	private Mall(List<Floor> floors, int operationCost, List<Employee> employees) {
+		this.floors = new ArrayList<>(floors);
 		this.mallState = new OpenMall(operationCost);
 		this.employeeManager = new EmployeeManager(employees);
+	}
+
+	public MallState getMallState() {
+		return mallState;
 	}
 
 	public List<Floor> getFloors() {
@@ -66,6 +71,7 @@ public class Mall implements Floor {
 		return this.employeeManager.getEmployees().size();
 	}
 
+	//	TODO: ADD EMPLOYEES ONLY WHEN MALL IS OPEN
 	@Override
 	public Floor addEmployee(Employee employee) {
 		this.employeeManager = this.employeeManager.addEmployee(employee);
@@ -78,8 +84,17 @@ public class Mall implements Floor {
 		return this;
 	}
 
-	public Floor addShop(Shop shop, int floorLevel) {
-		return this.addShop(shop, floors.get(floorLevel));
+	public void addShop(Shop shop, int floorLevel) {
+		this.mallState = mallState.addShop(
+				shop,
+				floorLevel,
+				this::addNewShop
+		);
+	}
+
+	private void addNewShop(Shop shop, int floorLevel) {
+		Floor floor = this.floors.get(floorLevel);
+		floor.addShop(shop, floor);
 	}
 
 	public void addFloor(Floor floor) {
@@ -127,7 +142,7 @@ public class Mall implements Floor {
 			return new Mall(floors, operationCost, employees);
 		}
 
-		public Builder setConstructionCost(int operationCost) {
+		public Builder setOperationCost(int operationCost) {
 			this.operationCost = operationCost;
 			return this;
 		}

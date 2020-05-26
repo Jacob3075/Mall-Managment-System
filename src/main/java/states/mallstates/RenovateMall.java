@@ -2,8 +2,10 @@ package states.mallstates;
 
 import floor.Floor;
 import mall.Mall;
+import shops.Shop;
 
 import java.util.function.Consumer;
+import java.util.function.ObjIntConsumer;
 
 public class RenovateMall implements MallState {
 
@@ -36,7 +38,12 @@ public class RenovateMall implements MallState {
 
 	@Override
 	public MallState addFloor(Floor floor, Consumer<Floor> floorConsumer) {
-		floorConsumer.accept(floor);
+		return this;
+	}
+
+	@Override
+	public MallState addShop(Shop shop, int floorLevel, ObjIntConsumer<Shop> shopObjIntConsumer) {
+		shopObjIntConsumer.accept(shop, floorLevel);
 		return this;
 	}
 
@@ -47,6 +54,6 @@ public class RenovateMall implements MallState {
 
 	@Override
 	public int getOperationCost() {
-		return 0;
+		return operationCost;
 	}
 }
