@@ -16,7 +16,7 @@ public class ShopBuilder {
 		this.shopFloorArea = shopFloorArea;
 	}
 
-	public Shop build() {
+	public Shop buildClothsShop() {
 		return new ClothsShop(
 				shopName,
 				rent,
@@ -24,6 +24,14 @@ public class ShopBuilder {
 				shopFloorArea,
 				employees
 		);
+	}
+
+	public Shop buildSportsShop() {
+		return null;
+	}
+
+	public Shop buildFoodShop() {
+		return null;
 	}
 
 	public ShopBuilder setRent(int rent) {

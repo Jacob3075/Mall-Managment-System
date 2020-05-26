@@ -1,17 +1,15 @@
 package mall;
 
-import employee_managment.MallEmployee;
 import floor.NormalFloor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import shops.ClothsShop;
+import shops.Shop;
 import states.mallstates.ClosedMall;
 import states.mallstates.MaintainMall;
 import states.mallstates.OpenMall;
 import states.mallstates.RenovateMall;
 import utils.Getters;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -22,44 +20,9 @@ class MallTest {
 
 	@BeforeEach
 	void setUp() {
+		Getters.reset();
 		Mall.Builder mallBuilder =
-				new Mall.Builder(List.of(
-						new NormalFloor(List.of(
-								new ClothsShop(
-										"Shop1", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop2", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop3", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop4", 1000, 2000, 20, Getters.shopEmployees)
-						)),
-						new NormalFloor(List.of(
-								new ClothsShop(
-										"Shop1", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop2", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop3", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop4", 1000, 2000, 20, Getters.shopEmployees)
-						)),
-						new NormalFloor(List.of(
-								new ClothsShop(
-										"Shop1", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop2", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop3", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop4", 1000, 2000, 20, Getters.shopEmployees)
-						))
-				)).setOperationCost(10000).setEmployees(List.of(
-						new MallEmployee("Name1", 20, 1000, 6),
-						new MallEmployee("Name2", 20, 1000, 6),
-						new MallEmployee("Name3", 20, 1000, 6),
-						new MallEmployee("Name4", 20, 1000, 6)
-				));
+				new Mall.Builder(Getters.floors).setOperationCost(10000).setEmployees(Getters.mallEmployees);
 		mall = mallBuilder.build();
 	}
 
@@ -78,33 +41,21 @@ class MallTest {
 	void openMallTests() {
 		assertTrue(mall.getMallState() instanceof OpenMall);
 
-		mall.addShop(
-				new ClothsShop(
-						"Name",
-						1000,
-						2000,
-						20,
-						Getters.shopEmployees
-				),
-				0
-		);
+		mall.addShop(newShop(), 0);
 		assertEquals(12, mall.getShops().size());
 
-		mall.addFloor(
-				new NormalFloor(
-						List.of(
-								new ClothsShop(
-										"Shop1", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop2", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop3", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop4", 1000, 2000, 20, Getters.shopEmployees)
-						)
-				)
-		);
+		mall.addFloor(new NormalFloor(Getters.shops));
 		assertEquals(3, mall.getFloors().size());
+	}
+
+	private Shop newShop() {
+		return new ClothsShop(
+				"Name",
+				1000,
+				2000,
+				20,
+				Getters.shopEmployees
+		);
 	}
 
 	@Test
@@ -112,32 +63,10 @@ class MallTest {
 		mall.closeMall();
 		assertTrue(mall.getMallState() instanceof ClosedMall);
 
-		mall.addFloor(
-				new NormalFloor(
-						List.of(
-								new ClothsShop(
-										"Shop1", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop2", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop3", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop4", 1000, 2000, 20, Getters.shopEmployees)
-						)
-				)
-		);
+		mall.addFloor(new NormalFloor(Getters.shops));
 		assertEquals(3, mall.getFloors().size());
 
-		mall.addShop(
-				new ClothsShop(
-						"Name",
-						1000,
-						2000,
-						20,
-						Getters.shopEmployees
-				),
-				0
-		);
+		mall.addShop(newShop(), 0);
 		assertEquals(13, mall.getShops().size());
 	}
 
@@ -147,30 +76,8 @@ class MallTest {
 		assertTrue(mall.getMallState() instanceof RenovateMall);
 		assertEquals(5000, mall.getOperationCost());
 
-		mall.addFloor(
-				new NormalFloor(
-						List.of(
-								new ClothsShop(
-										"Shop1", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop2", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop3", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop4", 1000, 2000, 20, Getters.shopEmployees)
-						)
-				)
-		);
-		mall.addShop(
-				new ClothsShop(
-						"Name",
-						1000,
-						2000,
-						20,
-						Getters.shopEmployees
-				),
-				1
-		);
+		mall.addFloor(new NormalFloor(Getters.shops));
+		mall.addShop(newShop(), 1);
 
 		assertEquals(3, mall.getFloors().size());
 		assertEquals(13, mall.getShops().size());
@@ -182,32 +89,10 @@ class MallTest {
 		assertTrue(mall.getMallState() instanceof MaintainMall);
 		assertEquals(5000, mall.getOperationCost());
 
-		mall.addShop(
-				new ClothsShop(
-						"Name",
-						1000,
-						2000,
-						20,
-						Getters.shopEmployees
-				),
-				0
-		);
+		mall.addShop(newShop(), 0);
 		assertEquals(13, mall.getShops().size());
 
-		mall.addFloor(
-				new NormalFloor(
-						List.of(
-								new ClothsShop(
-										"Shop1", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop2", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop3", 1000, 2000, 20, Getters.shopEmployees),
-								new ClothsShop(
-										"Shop4", 1000, 2000, 20, Getters.shopEmployees)
-						)
-				)
-		);
+		mall.addFloor(new NormalFloor(Getters.shops));
 		assertEquals(4, mall.getFloors().size());
 	}
 
