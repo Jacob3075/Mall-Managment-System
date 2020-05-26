@@ -2,6 +2,58 @@
 <project version="4">
   <component name="SessionConfiguration">
     <state version="1" />
-    <sessions />
+    <sessions>
+      <session name="Employee">
+        <files focusedFile="$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java">
+          <file>$PROJECT_DIR$/src/main/java/employee_managment/Employee.java</file>
+          <file>$PROJECT_DIR$/src/main/java/employee_managment/EmployeeManager.java</file>
+          <file>$PROJECT_DIR$/src/main/java/employee_managment/MallEmployee.java</file>
+          <file>$PROJECT_DIR$/src/main/java/employee_managment/ShopEmployee.java</file>
+        </files>
+      </session>
+      <session name="Employee States">
+        <files focusedFile="$PROJECT_DIR$/src/main/java/states/employee_state/Working.java">
+          <file>$PROJECT_DIR$/src/main/java/states/employee_state/EmployeeState.java</file>
+          <file>$PROJECT_DIR$/src/main/java/states/employee_state/EmployeeStates.java</file>
+          <file>$PROJECT_DIR$/src/main/java/states/employee_state/PaidLeave.java</file>
+          <file>$PROJECT_DIR$/src/main/java/states/employee_state/UnEmployed.java</file>
+          <file>$PROJECT_DIR$/src/main/java/states/employee_state/UnPaidLeave.java</file>
+          <file>$PROJECT_DIR$/src/main/java/states/employee_state/Working.java</file>
+        </files>
+      </session>
+      <session name="Floor">
+        <files focusedFile="$PROJECT_DIR$/src/main/java/mall/Mall.java">
+          <file>$PROJECT_DIR$/src/main/java/floor/Floor.java</file>
+          <file>$PROJECT_DIR$/src/main/java/floor/NormalFloor.java</file>
+          <file>$PROJECT_DIR$/src/main/java/mall/Mall.java</file>
+        </files>
+      </session>
+      <session name="Shops">
+        <files focusedFile="$PROJECT_DIR$/src/main/java/shops/ShopCategory.java">
+          <file>$PROJECT_DIR$/src/main/java/shops/ClothsShop.java</file>
+          <file>$PROJECT_DIR$/src/main/java/shops/Shop.java</file>
+          <file>$PROJECT_DIR$/src/main/java/shops/ShopBuilder.java</file>
+          <file>$PROJECT_DIR$/src/main/java/shops/ShopCategory.java</file>
+        </files>
+      </session>
+      <session name="Mall States">
+        <files focusedFile="$PROJECT_DIR$/src/main/java/states/mallstates/RenovateMall.java">
+          <file>$PROJECT_DIR$/src/main/java/states/mallstates/MaintainMall.java</file>
+          <file>$PROJECT_DIR$/src/main/java/states/mallstates/MallState.java</file>
+          <file>$PROJECT_DIR$/src/main/java/states/mallstates/OpenMall.java</file>
+          <file>$PROJECT_DIR$/src/main/java/states/mallstates/RenovateMall.java</file>
+          <file>$PROJECT_DIR$/src/main/java/states/mallstates/ClosedMall.java</file>
+        </files>
+      </session>
+      <session name="Tests">
+        <files focusedFile="$PROJECT_DIR$/src/test/java/floor/NormalFloorTest.java">
+          <file>$PROJECT_DIR$/src/test/java/floor/NormalFloorTest.java</file>
+          <file>$PROJECT_DIR$/src/test/java/mall/MallTest.java</file>
+          <file>$PROJECT_DIR$/src/test/java/employee_managment/EmployeeManagerTest.java</file>
+          <file>$PROJECT_DIR$/src/test/java/employee_managment/MallEmployeeTest.java</file>
+          <file>$PROJECT_DIR$/src/test/java/employee_managment/ShopEmployeeTest.java</file>
+        </files>
+      </session>
+    </sessions>
   </component>
 </project>

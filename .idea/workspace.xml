@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/tabsession.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/shops/ClothsShopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tabsession.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tabsession.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shops/ShopBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shops/ShopBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Getters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Getters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mall/MallTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mall/MallTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="shops" />
       <recent name="mall" />
       <recent name="floor" />
       <recent name="employee_managment" />
@@ -88,7 +87,54 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MallTest">
+  <component name="RunManager" selected="JUnit.ClothsShopTest.methodTests">
+    <configuration name="ClothsShopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mall Managment System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shops" />
+      <option name="MAIN_CLASS_NAME" value="shops.ClothsShopTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClothsShopTest.methodTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mall Managment System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shops" />
+      <option name="MAIN_CLASS_NAME" value="shops.ClothsShopTest" />
+      <option name="METHOD_NAME" value="methodTests" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClothsShopTest.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mall Managment System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shops" />
+      <option name="MAIN_CLASS_NAME" value="shops.ClothsShopTest" />
+      <option name="METHOD_NAME" value="name" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MallTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mall Managment System" />
       <extension name="coverage">
@@ -100,38 +146,6 @@
       <option name="PACKAGE_NAME" value="mall" />
       <option name="MAIN_CLASS_NAME" value="mall.MallTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MallTest.maintainMallTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mall Managment System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mall.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mall" />
-      <option name="MAIN_CLASS_NAME" value="mall.MallTest" />
-      <option name="METHOD_NAME" value="maintainMallTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MallTest.mallStateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mall Managment System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mall.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mall" />
-      <option name="MAIN_CLASS_NAME" value="mall.MallTest" />
-      <option name="METHOD_NAME" value="mallStateTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,29 +166,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MallTest.renovateMallTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mall Managment System" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mall.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mall" />
-      <option name="MAIN_CLASS_NAME" value="mall.MallTest" />
-      <option name="METHOD_NAME" value="renovateMallTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClothsShopTest.methodTests" />
+        <item itemvalue="JUnit.ClothsShopTest.name" />
+        <item itemvalue="JUnit.ClothsShopTest" />
         <item itemvalue="JUnit.MallTest" />
         <item itemvalue="JUnit.MallTest.methodsTest" />
-        <item itemvalue="JUnit.MallTest.mallStateTest" />
-        <item itemvalue="JUnit.MallTest.maintainMallTest" />
-        <item itemvalue="JUnit.MallTest.renovateMallTest" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590484652078</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Modified MallTest and Getters.&#10;Improved ShopBuilder.">
+      <created>1590508236758</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1590508236758</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +326,8 @@
     <MESSAGE value="Created simple test for NormalFloor and made some changes to Floor and NormalFloor.&#10;Added master Getters class in Utils to make it easier to create and use objects of Shop, Floor, Mall and Employees" />
     <MESSAGE value="Reformatted all files" />
     <MESSAGE value="Added test for Mall and made changes to MallStates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for Mall and made changes to MallStates" />
+    <MESSAGE value="Modified MallTest and Getters.&#10;Improved ShopBuilder." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified MallTest and Getters.&#10;Improved ShopBuilder." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -347,22 +353,22 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="100" y="130" width="1166" height="538" key="DiffContextDialog/0.30.1366.738@0.30.1366.738" timestamp="1590474585130" />
-    <state width="1320" height="155" key="GridCell.Tab.0.bottom" timestamp="1590508089432">
+    <state width="1320" height="153" key="GridCell.Tab.0.bottom" timestamp="1590508909246">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="155" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1590508089432" />
-    <state width="1320" height="155" key="GridCell.Tab.0.center" timestamp="1590508089430">
+    <state width="1320" height="153" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1590508909246" />
+    <state width="1320" height="153" key="GridCell.Tab.0.center" timestamp="1590508909241">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="155" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1590508089430" />
-    <state width="1320" height="155" key="GridCell.Tab.0.left" timestamp="1590508089429">
+    <state width="1320" height="153" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1590508909241" />
+    <state width="1320" height="153" key="GridCell.Tab.0.left" timestamp="1590508909239">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="155" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1590508089429" />
-    <state width="1320" height="155" key="GridCell.Tab.0.right" timestamp="1590508089431">
+    <state width="1320" height="153" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1590508909239" />
+    <state width="1320" height="153" key="GridCell.Tab.0.right" timestamp="1590508909246">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="155" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1590508089431" />
+    <state width="1320" height="153" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1590508909246" />
     <state x="501" y="336" width="354" height="127" key="ReplaceDuplicatesPrompt" timestamp="1590507278610">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -371,10 +377,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="166" y="30" width="1024" height="738" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1590474412664" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1590424894894">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1590508495132">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.30.1366.738@0.30.1366.738" timestamp="1590424894894" />
+    <state width="498" height="446" key="SwitcherDM/0.30.1366.738@0.30.1366.738" timestamp="1590508495132" />
     <state x="569" y="316" width="218" height="167" key="VCS.EditChangelistDialog" timestamp="1590426237303">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -395,10 +401,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="488" y="315" width="379" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1366.738@0.30.1366.738" timestamp="1590507257864" />
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590473575867">
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590508528133">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590473575867" />
+    <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.30.1366.738@0.30.1366.738" timestamp="1590508528133" />
     <state x="416" y="161" width="524" height="497" key="extract.method.dialog" timestamp="1590507273985">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -407,9 +413,9 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="415" y="158" width="526" height="483" key="refactoring.ChangeSignatureDialog/0.30.1366.738@0.30.1366.738" timestamp="1590386618406" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1590507429790">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1590508842743">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1590507429790" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1590508842743" />
   </component>
 </project>
