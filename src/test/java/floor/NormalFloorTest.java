@@ -10,11 +10,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class NormalFloorTest {
-	private static Floor floor = new NormalFloor(Getters.shops);
+	private static Floor floor = new NormalFloor(Getters.getShops());
 
 	@BeforeEach
 	void setUp() {
-		floor = new NormalFloor(Getters.shops);
+		floor = new NormalFloor(Getters.getShops());
 	}
 
 	@Test
@@ -24,14 +24,14 @@ class NormalFloorTest {
 		assertEquals(8000, floor.getRevenue());
 		assertEquals(4, floor.getShops().size());
 
-		floor = floor.addShop(Getters.shops.get(0), floor);
+		floor = floor.addShop(Getters.getShops().get(0), floor);
 
 		assertEquals(5, floor.getShops().size());
 		assertEquals(10000, floor.getRevenue());
 		assertEquals(100, floor.getTotalUsedSpace());
 		assertEquals(0, floor.getFreeSpace());
 
-		floor = floor.removeShop(Getters.shops.get(0), floor);
+		floor = floor.removeShop(Getters.getShops().get(0), floor);
 
 		assertEquals(4, floor.getShops().size());
 
@@ -39,10 +39,10 @@ class NormalFloorTest {
 
 	@Test
 	void throwsExceptionTest() {
-		floor = floor.addShop(Getters.shops.get(0), floor);
+		floor = floor.addShop(Getters.getShops().get(0), floor);
 		assertThrows(
 				InvalidParameterException.class,
-				() -> floor.addShop(Getters.shops.get(1), floor)
+				() -> floor.addShop(Getters.getShops().get(1), floor)
 		);
 	}
 }

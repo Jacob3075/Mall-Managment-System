@@ -12,31 +12,28 @@ import java.util.List;
 
 public class Getters {
 
-	public static List<Employee> mallEmployees = List.of(
-			new MallEmployee("Name1", 20, 1000, 6),
-			new MallEmployee("Name2", 20, 1000, 6),
-			new MallEmployee("Name3", 20, 1000, 6),
-			new MallEmployee("Name4", 20, 1000, 6)
-	);
-
-	public static List<Employee> shopEmployees = List.of(
+	private static List<Employee> shopEmployees = List.of(
 			new ShopEmployee("Name1", 20, 1000, 6),
 			new ShopEmployee("Name2", 20, 1000, 6),
 			new ShopEmployee("Name3", 20, 1000, 6),
 			new ShopEmployee("Name4", 20, 1000, 6)
 	);
-
-	public static List<Shop> shops = List.of(
-			new ClothsShop("Shop1", 1000, 2000, 20, shopEmployees),
-			new ClothsShop("Shop2", 1000, 2000, 20, shopEmployees),
-			new ClothsShop("Shop3", 1000, 2000, 20, shopEmployees),
-			new ClothsShop("Shop4", 1000, 2000, 20, shopEmployees)
+	private static List<Shop>     shops         = List.of(
+			new ClothsShop("Shop1", 1000, 2000, 20, getShopEmployees()),
+			new ClothsShop("Shop2", 1000, 2000, 20, getShopEmployees()),
+			new ClothsShop("Shop3", 1000, 2000, 20, getShopEmployees()),
+			new ClothsShop("Shop4", 1000, 2000, 20, getShopEmployees())
 	);
-
-	public static List<Floor> floors = List.of(
-			new NormalFloor(shops),
-			new NormalFloor(shops),
-			new NormalFloor(shops)
+	private static List<Floor>    floors        = List.of(
+			new NormalFloor(getShops()),
+			new NormalFloor(getShops()),
+			new NormalFloor(getShops())
+	);
+	private static List<Employee> mallEmployees = List.of(
+			new MallEmployee("Name1", 20, 1000, 6),
+			new MallEmployee("Name2", 20, 1000, 6),
+			new MallEmployee("Name3", 20, 1000, 6),
+			new MallEmployee("Name4", 20, 1000, 6)
 	);
 
 
@@ -45,33 +42,65 @@ public class Getters {
 	}
 
 	public static void reset() {
-		floors = List.of(
-				new NormalFloor(shops),
-				new NormalFloor(shops),
-				new NormalFloor(shops)
-		);
+		setFloors(List.of(
+				new NormalFloor(getShops()),
+				new NormalFloor(getShops()),
+				new NormalFloor(getShops())
+		));
 
-		shops = List.of(
-				new ClothsShop("Shop1", 1000, 2000, 20, shopEmployees),
-				new ClothsShop("Shop2", 1000, 2000, 20, shopEmployees),
-				new ClothsShop("Shop3", 1000, 2000, 20, shopEmployees),
-				new ClothsShop("Shop4", 1000, 2000, 20, shopEmployees)
-		);
+		setShops(List.of(
+				new ClothsShop("Shop1", 1000, 2000, 20, getShopEmployees()),
+				new ClothsShop("Shop2", 1000, 2000, 20, getShopEmployees()),
+				new ClothsShop("Shop3", 1000, 2000, 20, getShopEmployees()),
+				new ClothsShop("Shop4", 1000, 2000, 20, getShopEmployees())
+		));
 
-		shopEmployees = List.of(
+		setShopEmployees(List.of(
 				new ShopEmployee("Name1", 20, 1000, 6),
 				new ShopEmployee("Name2", 20, 1000, 6),
 				new ShopEmployee("Name3", 20, 1000, 6),
 				new ShopEmployee("Name4", 20, 1000, 6)
-		);
+		));
 
-		mallEmployees = List.of(
+		setMallEmployees(List.of(
 				new MallEmployee("Name1", 20, 1000, 6),
 				new MallEmployee("Name2", 20, 1000, 6),
 				new MallEmployee("Name3", 20, 1000, 6),
 				new MallEmployee("Name4", 20, 1000, 6)
-		);
+		));
 
 
+	}
+
+	public static List<Shop> getShops() {
+		return shops;
+	}
+
+	public static List<Employee> getShopEmployees() {
+		return shopEmployees;
+	}
+
+	private static void setShopEmployees(List<Employee> shopEmployees) {
+		Getters.shopEmployees = shopEmployees;
+	}
+
+	private static void setShops(List<Shop> shops) {
+		Getters.shops = shops;
+	}
+
+	public static List<Employee> getMallEmployees() {
+		return mallEmployees;
+	}
+
+	private static void setMallEmployees(List<Employee> mallEmployees) {
+		Getters.mallEmployees = mallEmployees;
+	}
+
+	public static List<Floor> getFloors() {
+		return floors;
+	}
+
+	public static void setFloors(List<Floor> floors) {
+		Getters.floors = floors;
 	}
 }

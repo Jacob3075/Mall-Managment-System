@@ -13,13 +13,13 @@ class ClothsShopTest {
 
 	static {
 		Getters.reset();
-		shop = new ClothsShop("Name", 1000, 2000, 30, Getters.shopEmployees);
+		shop = new ClothsShop("Name", 1000, 2000, 30, Getters.getShopEmployees());
 	}
 
 	@BeforeEach
 	void setUp() {
 		Getters.reset();
-		shop = new ClothsShop("Name", 1000, 2000, 30, Getters.shopEmployees);
+		shop = new ClothsShop("Name", 1000, 2000, 30, Getters.getShopEmployees());
 	}
 
 	@Test
@@ -45,7 +45,7 @@ class ClothsShopTest {
 	void usingShopBuilder() {
 		ShopBuilder shopBuilder = new ShopBuilder("Name", 30);
 		shopBuilder = shopBuilder.setRent(1000)
-		                         .setEmployees(Getters.shopEmployees)
+		                         .setEmployees(Getters.getShopEmployees())
 		                         .setRevenue(2000);
 		Shop shopFromBuilder = shopBuilder.buildClothsShop();
 		assertEquals(30, shopFromBuilder.getShopUsedArea());

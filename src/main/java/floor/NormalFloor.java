@@ -1,6 +1,5 @@
 package floor;
 
-import employee_managment.Employee;
 import shops.Shop;
 
 import java.security.InvalidParameterException;
@@ -42,28 +41,6 @@ public class NormalFloor implements Floor {
 	@Override
 	public int getRevenue() {
 		return Shop.stream(shops).getRevenue();
-	}
-
-	@Override
-	public List<Employee> getEmployees() {
-		return new ArrayList<>();
-	}
-
-	//	TODO: Singleton? Restructure EmployeeManager?
-
-	@Override
-	public int getEmployeesCount() {
-		return 0;
-	}
-
-	@Override
-	public Floor addEmployee(Employee employee) {
-		return null;
-	}
-
-	@Override
-	public Floor removeEmployee(Employee employee) {
-		return null;
 	}
 
 	public Floor addShop(Shop shop) {

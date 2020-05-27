@@ -1,6 +1,5 @@
 package floor;
 
-import employee_managment.Employee;
 import shops.Shop;
 import utils.FloorsStream;
 
@@ -36,12 +35,4 @@ public interface Floor {
 	int getTotalUsedSpace();
 
 	int getRevenue();
-
-	List<Employee> getEmployees();
-
-	int getEmployeesCount();
-
-	Floor addEmployee(Employee employee);
-
-	Floor removeEmployee(Employee employee);
 }

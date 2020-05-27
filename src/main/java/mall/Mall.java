@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Mall implements Floor {
+public class Mall {
 	private final ArrayList<Floor> floors;
 	private       MallState        mallState;
 	private       EmployeeManager  employeeManager;
@@ -34,52 +34,43 @@ public class Mall implements Floor {
 		return this.mallState.getOperationCost();
 	}
 
-	@Override
 	public List<Shop> getShops() {
 		return Floor.stream(floors)
 		            .getShops()
 		            .collect(Collectors.toList());
 	}
 
-	@Override
 	public int getFreeSpace() {
 		return Floor.stream(floors).getTotalFreeSpace();
 	}
 
-	@Override
 	public int getTotalSpace() {
 		return Floor.stream(floors).getTotalFloorsArea();
 	}
 
-	@Override
 	public int getTotalUsedSpace() {
 		return Floor.stream(floors).getFloorsUsedArea();
 	}
 
-	@Override
 	public int getRevenue() {
 		return mallState.getTotalRevenue(this);
 	}
 
-	@Override
 	public List<Employee> getEmployees() {
 		return this.employeeManager.getEmployees();
 	}
 
-	@Override
 	public int getEmployeesCount() {
 		return this.employeeManager.getEmployees().size();
 	}
 
 	//	TODO: ADD EMPLOYEES ONLY WHEN MALL IS OPEN
-	@Override
-	public Floor addEmployee(Employee employee) {
+	public Mall addEmployee(Employee employee) {
 		this.employeeManager = this.employeeManager.addEmployee(employee);
 		return this;
 	}
 
-	@Override
-	public Floor removeEmployee(Employee employee) {
+	public Mall removeEmployee(Employee employee) {
 		this.employeeManager = this.employeeManager.removeEmployee(employee);
 		return this;
 	}

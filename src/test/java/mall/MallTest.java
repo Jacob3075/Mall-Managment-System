@@ -22,7 +22,7 @@ class MallTest {
 	void setUp() {
 		Getters.reset();
 		Mall.Builder mallBuilder =
-				new Mall.Builder(Getters.floors).setOperationCost(10000).setEmployees(Getters.mallEmployees);
+				new Mall.Builder(Getters.getFloors()).setOperationCost(10000).setEmployees(Getters.getMallEmployees());
 		mall = mallBuilder.build();
 	}
 
@@ -44,7 +44,7 @@ class MallTest {
 		mall.addShop(newShop(), 0);
 		assertEquals(12, mall.getShops().size());
 
-		mall.addFloor(new NormalFloor(Getters.shops));
+		mall.addFloor(new NormalFloor(Getters.getShops()));
 		assertEquals(3, mall.getFloors().size());
 	}
 
@@ -54,7 +54,7 @@ class MallTest {
 				1000,
 				2000,
 				20,
-				Getters.shopEmployees
+				Getters.getShopEmployees()
 		);
 	}
 
@@ -63,7 +63,7 @@ class MallTest {
 		mall.closeMall();
 		assertTrue(mall.getMallState() instanceof ClosedMall);
 
-		mall.addFloor(new NormalFloor(Getters.shops));
+		mall.addFloor(new NormalFloor(Getters.getShops()));
 		assertEquals(3, mall.getFloors().size());
 
 		mall.addShop(newShop(), 0);
@@ -76,7 +76,7 @@ class MallTest {
 		assertTrue(mall.getMallState() instanceof RenovateMall);
 		assertEquals(5000, mall.getOperationCost());
 
-		mall.addFloor(new NormalFloor(Getters.shops));
+		mall.addFloor(new NormalFloor(Getters.getShops()));
 		mall.addShop(newShop(), 1);
 
 		assertEquals(3, mall.getFloors().size());
@@ -92,7 +92,7 @@ class MallTest {
 		mall.addShop(newShop(), 0);
 		assertEquals(13, mall.getShops().size());
 
-		mall.addFloor(new NormalFloor(Getters.shops));
+		mall.addFloor(new NormalFloor(Getters.getShops()));
 		assertEquals(4, mall.getFloors().size());
 	}
 
