@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/floor/GroundFloor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/floor/FoodCourt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/floor/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/floor/Floor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/floor/NormalFloor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/floor/NormalFloor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +56,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="JavaMethodFindUsagesOptions.isImplementingMethods" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -325,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591202138604</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added new Floor type (GroundFloor) and updated Floor and NormalFloor.">
+      <created>1591203059817</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1591203059817</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +369,8 @@
     <MESSAGE value="Changed Mall to not implement Floor interface" />
     <MESSAGE value="Changed Mall to not implement Floor interface.&#10;Modified Getters to have private fields and public accessors" />
     <MESSAGE value="Updated Employee to use Builder and created test for it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Employee to use Builder and created test for it" />
+    <MESSAGE value="Added new Floor type (GroundFloor) and updated Floor and NormalFloor." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new Floor type (GroundFloor) and updated Floor and NormalFloor." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -377,10 +384,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="100" y="130" width="1166" height="538" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.30.1366.738@0.30.1366.738" timestamp="1590427004197" />
-    <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1591202479280">
+    <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1591203102272">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1591202479280" />
+    <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1591203102272" />
     <state x="390" y="152" width="576" height="495" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1590554967816">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -429,10 +436,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="278" y="135" width="800" height="529" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1590556056014" />
-    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog" timestamp="1591202224328">
+    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog" timestamp="1591203066746">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog/0.30.1366.738@0.30.1366.738" timestamp="1591202224328" />
+    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog/0.30.1366.738@0.30.1366.738" timestamp="1591203066746" />
     <state x="392" y="293" width="572" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590383197450">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
