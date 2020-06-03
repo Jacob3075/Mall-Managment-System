@@ -28,6 +28,10 @@ public interface Floor {
 		return floor;
 	}
 
+	Floor addShop(Shop shop);
+
+	Floor removeShop(Shop shop);
+
 	int getFreeSpace();
 
 	int getTotalSpace();
