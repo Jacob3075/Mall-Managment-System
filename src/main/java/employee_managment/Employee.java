@@ -33,4 +33,34 @@ public interface Employee {
 	int getWorkingHours();
 
 	Employee setWorkingHours(int workingHours);
+
+	class Builder {
+		private final String name;
+		private final int    age;
+		private       int    salary;
+		private       int    workingHours;
+
+		public Builder(String name, int age) {
+			this.name = name;
+			this.age = age;
+		}
+
+		public Builder setSalary(int salary) {
+			this.salary = salary;
+			return this;
+		}
+
+		public Builder setWorkingHours(int workingHours) {
+			this.workingHours = workingHours;
+			return this;
+		}
+
+		public Employee employShopEmployee() {
+			return new ShopEmployee(name, age, salary, workingHours);
+		}
+
+		public Employee employMallEmployee() {
+			return new MallEmployee(name, age, salary, workingHours);
+		}
+	}
 }
