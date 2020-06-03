@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/floor/FoodCourt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -69,12 +67,12 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/floor" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/employee_managment" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
+    <property name="settings.editor.selected.configurable" value="zielu.gittoolbox.app.config" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -331,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591203059817</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added new Floor type, FoodCourt.">
+      <created>1591203379421</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1591203379421</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added the basics to implement Item system for shops. Created Item interface, ItemImpl class and simple ItemManager class">
+      <created>1591204293155</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1591204293155</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +382,9 @@
     <MESSAGE value="Changed Mall to not implement Floor interface.&#10;Modified Getters to have private fields and public accessors" />
     <MESSAGE value="Updated Employee to use Builder and created test for it" />
     <MESSAGE value="Added new Floor type (GroundFloor) and updated Floor and NormalFloor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new Floor type (GroundFloor) and updated Floor and NormalFloor." />
+    <MESSAGE value="Added new Floor type, FoodCourt." />
+    <MESSAGE value="Added the basics to implement Item system for shops. Created Item interface, ItemImpl class and simple ItemManager class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the basics to implement Item system for shops. Created Item interface, ItemImpl class and simple ItemManager class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -384,10 +398,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="100" y="130" width="1166" height="538" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.30.1366.738@0.30.1366.738" timestamp="1590427004197" />
-    <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1591203102272">
+    <state x="491" y="107" width="565" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1591203978812">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="491" y="107" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1591203102272" />
+    <state x="491" y="107" width="565" height="584" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1591203978811" />
     <state x="390" y="152" width="576" height="495" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1590554967816">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -420,10 +434,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="501" y="336" width="354" height="127" key="ReplaceDuplicatesPrompt/0.30.1366.738@0.30.1366.738" timestamp="1590507278610" />
-    <state x="166" y="30" width="1024" height="738" key="SettingsEditor" timestamp="1590474412664">
+    <state x="166" y="30" width="1024" height="738" key="SettingsEditor" timestamp="1591204360256">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="166" y="30" width="1024" height="738" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1590474412664" />
+    <state x="166" y="30" width="1024" height="738" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1591204360256" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1590508495132">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -432,22 +446,22 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="569" y="316" width="218" height="167" key="VCS.EditChangelistDialog/0.30.1366.738@0.30.1366.738" timestamp="1590426237303" />
-    <state x="278" y="135" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1590556056014">
+    <state x="278" y="135" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1591203487370">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="278" y="135" width="800" height="529" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1590556056014" />
-    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog" timestamp="1591203066746">
+    <state x="278" y="135" width="800" height="529" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1591203487370" />
+    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog" timestamp="1591203516747">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog/0.30.1366.738@0.30.1366.738" timestamp="1591203066746" />
+    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog/0.30.1366.738@0.30.1366.738" timestamp="1591203516747" />
     <state x="392" y="293" width="572" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590383197450">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="392" y="293" width="572" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.30.1366.738@0.30.1366.738" timestamp="1590383197450" />
-    <state x="488" y="315" width="379" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590507257864">
+    <state x="488" y="315" width="439" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591204015492">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="488" y="315" width="379" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1366.738@0.30.1366.738" timestamp="1590507257864" />
+    <state x="488" y="315" width="439" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1366.738@0.30.1366.738" timestamp="1591204015492" />
     <state x="450" y="62" width="456" height="674" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1591201362707">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
