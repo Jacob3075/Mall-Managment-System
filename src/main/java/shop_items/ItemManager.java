@@ -4,6 +4,9 @@ import utils.ItemsStream;
 
 import java.security.InvalidParameterException;
 import java.util.List;
+import java.util.function.IntConsumer;
+import java.util.function.ToIntFunction;
+import java.util.stream.Collectors;
 
 public class ItemManager {
 	private List<Item> items;
@@ -21,56 +24,39 @@ public class ItemManager {
 		return this;
 	}
 
-	public ItemManager removeItem(Item item) {
-		this.items.remove(item);
+	public ItemManager removeItem(String itemName) {
+		this.stream()
+		    .findItem(itemName)
+		    .ifPresent(item -> this.items.remove(item));
 		return this;
 	}
 
-	public void sellItem(String itemName) {
-		this.stream()
-		    .findItem(itemName)
-		    .ifPresentOrElse(
-				    Item::sellItem,
-				    () -> {
-					    throw new InvalidParameterException("Item not found");
-				    }
-		    );
-	}
-
-	private ItemsStream stream() {
+	public ItemsStream stream() {
 		return new ItemsStream(this.items.stream());
 	}
 
-	public void sellItems(String itemName, int count) {
+	public ItemManager sellItem(String itemName, IntConsumer intConsumer) {
+		return this.sellItems(itemName, 1, intConsumer);
+	}
+
+	public ItemManager sellItems(String itemName, int count, IntConsumer intConsumer) {
 		this.stream()
 		    .findItem(itemName)
 		    .ifPresentOrElse(
-				    item -> item.sellItems(count),
+				    item -> {
+					    intConsumer.accept(item.getPrice() * count);
+					    item.sellItems(count);
+				    },
 				    () -> {
 					    throw new InvalidParameterException("Item not found");
 				    }
 		    );
+		return this;
 
 	}
 
 	public ItemManager increaseItemCount(String itemName) {
-		this.stream()
-		    .findItem(itemName)
-		    .ifPresentOrElse(
-				    Item::addItem,
-				    () -> this.addItem(
-						    new ItemImpl(
-								    itemName,
-								    0,
-								    1
-						    )
-				    )
-		    );
-		return this;
-	}
-
-	private void addItem(Item item) {
-		this.items.add(item);
+		return this.increaseItemCount(itemName, 1);
 	}
 
 	public ItemManager increaseItemCount(String itemName, int count) {
@@ -89,6 +75,10 @@ public class ItemManager {
 		return this;
 	}
 
+	public void addItem(Item item) {
+		if (this.stream().findItem(item.getName()).isEmpty()) this.items.add(item);
+	}
+
 	@Override
 	public String toString() {
 		return "ItemManager{" +
@@ -96,4 +86,9 @@ public class ItemManager {
 				       '}';
 	}
 
+	public List<Item> getItemsSortedBy(ToIntFunction<Item> comparingBy) {
+		return this.stream()
+		           .sortItemsBy(comparingBy)
+		           .collect(Collectors.toList());
+	}
 }

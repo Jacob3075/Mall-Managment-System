@@ -2,14 +2,16 @@ package shops;
 
 import employee_managment.Employee;
 import employee_managment.EmployeeManager;
+import shop_items.Item;
 import shop_items.ItemManager;
 
 import java.util.List;
+import java.util.function.ToIntFunction;
 
 public class ClothsShop implements Shop {
 	private final ShopCategory    shopCategory = ShopCategory.CLOTHING;
-	private final int             revenue;
 	private final int             shopFloorArea;
+	private       int             revenue      = 0;
 	private       String          shopName;
 	private       int             rent;
 	private       ItemManager     itemManager;
@@ -33,8 +35,16 @@ public class ClothsShop implements Shop {
 	}
 
 	//region Item Region
-	public ItemManager getItemManager() {
-		return itemManager;
+	public List<Item> getAllItems() {
+		return itemManager.getItems();
+	}
+
+	public List<Item> getItemsSortedBy(ToIntFunction<Item> comparingBy) {
+		return this.itemManager.getItemsSortedBy(comparingBy);
+	}
+
+	public List<Item> getItemsInStock() {
+		return itemManager.stream().itemsInStock();
 	}
 
 	public Shop setItemManager(ItemManager itemManager) {
@@ -42,24 +52,41 @@ public class ClothsShop implements Shop {
 		return this;
 	}
 
-	public void addItem(String itemName) {
+	public Shop addItem(String itemName) {
 		itemManager = itemManager.increaseItemCount(itemName);
+		return this;
 	}
 
-	public void addItems(String itemName, int count) {
+	public Shop addItems(String itemName, int count) {
 		itemManager = itemManager.increaseItemCount(itemName, count);
+		return this;
 	}
 
-	public void sellItem(String itemName) {
-		itemManager.sellItem(itemName);
+	public Shop sellItem(String itemName) {
+		itemManager = itemManager.sellItem(itemName, this::increaseRevenue);
+		return this;
 	}
 
-	public void sellItems(String itemName, int count) {
-		itemManager.sellItems(itemName, count);
+	private void increaseRevenue(int price) {
+		this.revenue += price;
+	}
+
+	public Shop sellItems(String itemName, int count) {
+		itemManager = itemManager.sellItems(
+				itemName,
+				count,
+				this::increaseRevenue
+		);
+		return this;
+	}
+
+	public Shop removeItemFromStock(String itemName) {
+		itemManager = itemManager.removeItem(itemName);
+		return this;
 	}
 //	endregion
 
-	//region Getters
+	//region Other Getters
 	public ShopCategory getShopCategory() {
 		return shopCategory;
 	}
@@ -108,7 +135,7 @@ public class ClothsShop implements Shop {
 	}
 	//endregion
 
-	//region Setters
+	//region Other Setters
 	public Shop setRent(int rent) {
 		this.rent = rent;
 		return this;
