@@ -10,5 +10,9 @@ public interface Item {
 
 	Item addItem();
 
+	Item addItems(int count);
+
 	Item sellItem();
+
+	Item sellItems(int count);
 }

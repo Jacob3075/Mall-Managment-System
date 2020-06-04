@@ -31,13 +31,24 @@ public class ItemImpl implements Item {
 
 	@Override
 	public Item addItem() {
-		this.count++;
+		return this.addItems(1);
+	}
+
+	@Override
+	public Item addItems(int count) {
+		this.count += count;
 		return this;
 	}
 
 	@Override
 	public Item sellItem() {
-		this.count--;
+		return this.sellItems(1);
+	}
+
+	@Override
+	public Item sellItems(int count) {
+		if (this.count == 0) throw new UnsupportedOperationException("No more items to sell");
+		this.count -= count;
 		return this;
 	}
 
@@ -64,4 +75,6 @@ public class ItemImpl implements Item {
 				       ", count=" + count +
 				       '}';
 	}
+
+
 }

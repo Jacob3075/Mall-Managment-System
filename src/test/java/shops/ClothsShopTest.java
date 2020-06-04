@@ -1,9 +1,13 @@
 package shops;
 
+import employee_managment.EmployeeManager;
 import employee_managment.ShopEmployee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import shop_items.ItemManager;
 import utils.Getters;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,13 +17,27 @@ class ClothsShopTest {
 
 	static {
 		Getters.reset();
-		shop = new ClothsShop("Name", 1000, 2000, 30, Getters.getShopEmployees());
+		shop = new ClothsShop(
+				"Name",
+				1000,
+				2000,
+				30,
+				new ItemManager(List.of()),
+				new EmployeeManager(Getters.getShopEmployees())
+		);
 	}
 
 	@BeforeEach
 	void setUp() {
 		Getters.reset();
-		shop = new ClothsShop("Name", 1000, 2000, 30, Getters.getShopEmployees());
+		shop = new ClothsShop(
+				"Name",
+				1000,
+				2000,
+				30,
+				new ItemManager(List.of()),
+				new EmployeeManager(Getters.getShopEmployees())
+		);
 	}
 
 	@Test
@@ -43,9 +61,9 @@ class ClothsShopTest {
 
 	@Test
 	void usingShopBuilder() {
-		ShopBuilder shopBuilder = new ShopBuilder("Name", 30);
+		Shop.ShopBuilder shopBuilder = new Shop.ShopBuilder("Name", 30);
 		shopBuilder = shopBuilder.setRent(1000)
-		                         .setEmployees(Getters.getShopEmployees())
+		                         .setEmployeeManager(new EmployeeManager(Getters.getShopEmployees()))
 		                         .setRevenue(2000);
 		Shop shopFromBuilder = shopBuilder.buildClothsShop();
 		assertEquals(30, shopFromBuilder.getShopUsedArea());

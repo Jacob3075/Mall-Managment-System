@@ -1,11 +1,12 @@
 import employee_managment.Employee;
+import employee_managment.EmployeeManager;
 import employee_managment.ShopEmployee;
 import floor.Floor;
 import floor.NormalFloor;
 import mall.Mall;
+import shop_items.ItemManager;
 import shops.ClothsShop;
 import shops.Shop;
-import shops.ShopBuilder;
 
 import java.util.List;
 
@@ -21,12 +22,40 @@ public class Main {
 		);
 
 		List<Shop> shops1 = List.of(
-				new ClothsShop("Shop1", 100, 150, 50, employees1),
-				new ClothsShop("Shop2", 120, 170, 40, employees2)
+				new ClothsShop(
+						"Shop1",
+						100,
+						150,
+						50,
+						new ItemManager(List.of()),
+						new EmployeeManager(employees1)
+				),
+				new ClothsShop(
+						"Shop2",
+						120,
+						170,
+						40,
+						new ItemManager(List.of()),
+						new EmployeeManager(employees2)
+				)
 		);
 		List<Shop> shops2 = List.of(
-				new ClothsShop("Shop3", 100, 150, 20, employees1),
-				new ClothsShop("Shop4", 120, 170, 50, employees2)
+				new ClothsShop(
+						"Shop3",
+						100,
+						150,
+						20,
+						new ItemManager(List.of()),
+						new EmployeeManager(employees1)
+				),
+				new ClothsShop(
+						"Shop4",
+						120,
+						170,
+						50,
+						new ItemManager(List.of()),
+						new EmployeeManager(employees2)
+				)
 		);
 
 		Floor floor1 = new NormalFloor(shops1);
@@ -55,7 +84,7 @@ public class Main {
 		newMall.closeMall();
 
 
-		Shop shop = new ShopBuilder(
+		Shop shop = new Shop.ShopBuilder(
 				"Name",
 				1000
 		)

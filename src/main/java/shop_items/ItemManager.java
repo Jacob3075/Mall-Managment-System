@@ -1,5 +1,8 @@
 package shop_items;
 
+import utils.ItemsStream;
+
+import java.security.InvalidParameterException;
 import java.util.List;
 
 public class ItemManager {
@@ -18,13 +21,71 @@ public class ItemManager {
 		return this;
 	}
 
-	public ItemManager addItem(Item item) {
-		this.items.add(item);
+	public ItemManager removeItem(Item item) {
+		this.items.remove(item);
 		return this;
 	}
 
-	public ItemManager removeItem(Item item) {
-		this.items.remove(item);
+	public void sellItem(String itemName) {
+		this.stream()
+		    .findItem(itemName)
+		    .ifPresentOrElse(
+				    Item::sellItem,
+				    () -> {
+					    throw new InvalidParameterException("Item not found");
+				    }
+		    );
+	}
+
+	private ItemsStream stream() {
+		return new ItemsStream(this.items.stream());
+	}
+
+	public void sellItems(String itemName, int count) {
+		this.stream()
+		    .findItem(itemName)
+		    .ifPresentOrElse(
+				    item -> item.sellItems(count),
+				    () -> {
+					    throw new InvalidParameterException("Item not found");
+				    }
+		    );
+
+	}
+
+	public ItemManager increaseItemCount(String itemName) {
+		this.stream()
+		    .findItem(itemName)
+		    .ifPresentOrElse(
+				    Item::addItem,
+				    () -> this.addItem(
+						    new ItemImpl(
+								    itemName,
+								    0,
+								    1
+						    )
+				    )
+		    );
+		return this;
+	}
+
+	private void addItem(Item item) {
+		this.items.add(item);
+	}
+
+	public ItemManager increaseItemCount(String itemName, int count) {
+		this.stream()
+		    .findItem(itemName)
+		    .ifPresentOrElse(
+				    item -> item.addItems(count),
+				    () -> this.addItem(
+						    new ItemImpl(
+								    itemName,
+								    0,
+								    1
+						    )
+				    )
+		    );
 		return this;
 	}
 
@@ -34,4 +95,5 @@ public class ItemManager {
 				       "items=" + items +
 				       '}';
 	}
+
 }

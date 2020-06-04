@@ -1,10 +1,12 @@
 package utils;
 
 import employee_managment.Employee;
+import employee_managment.EmployeeManager;
 import employee_managment.MallEmployee;
 import employee_managment.ShopEmployee;
 import floor.Floor;
 import floor.NormalFloor;
+import shop_items.ItemManager;
 import shops.ClothsShop;
 import shops.Shop;
 
@@ -19,10 +21,38 @@ public class Getters {
 			new ShopEmployee("Name4", 20, 1000, 6)
 	);
 	private static List<Shop>     shops         = List.of(
-			new ClothsShop("Shop1", 1000, 2000, 20, getShopEmployees()),
-			new ClothsShop("Shop2", 1000, 2000, 20, getShopEmployees()),
-			new ClothsShop("Shop3", 1000, 2000, 20, getShopEmployees()),
-			new ClothsShop("Shop4", 1000, 2000, 20, getShopEmployees())
+			new ClothsShop(
+					"Shop1",
+					1000,
+					2000,
+					20,
+					new ItemManager(List.of()),
+					new EmployeeManager(getShopEmployees())
+			),
+			new ClothsShop(
+					"Shop2",
+					1000,
+					2000,
+					20,
+					new ItemManager(List.of()),
+					new EmployeeManager(getShopEmployees())
+			),
+			new ClothsShop(
+					"Shop3",
+					1000,
+					2000,
+					20,
+					new ItemManager(List.of()),
+					new EmployeeManager(getShopEmployees())
+			),
+			new ClothsShop(
+					"Shop4",
+					1000,
+					2000,
+					20,
+					new ItemManager(List.of()),
+					new EmployeeManager(getShopEmployees())
+			)
 	);
 	private static List<Floor>    floors        = List.of(
 			new NormalFloor(getShops()),
@@ -49,10 +79,38 @@ public class Getters {
 		));
 
 		setShops(List.of(
-				new ClothsShop("Shop1", 1000, 2000, 20, getShopEmployees()),
-				new ClothsShop("Shop2", 1000, 2000, 20, getShopEmployees()),
-				new ClothsShop("Shop3", 1000, 2000, 20, getShopEmployees()),
-				new ClothsShop("Shop4", 1000, 2000, 20, getShopEmployees())
+				new ClothsShop(
+						"Shop1",
+						1000,
+						2000,
+						20,
+						new ItemManager(List.of()),
+						new EmployeeManager(getShopEmployees())
+				),
+				new ClothsShop(
+						"Shop2",
+						1000,
+						2000,
+						20,
+						new ItemManager(List.of()),
+						new EmployeeManager(getShopEmployees())
+				),
+				new ClothsShop(
+						"Shop3",
+						1000,
+						2000,
+						20,
+						new ItemManager(List.of()),
+						new EmployeeManager(getShopEmployees())
+				),
+				new ClothsShop(
+						"Shop4",
+						1000,
+						2000,
+						20,
+						new ItemManager(List.of()),
+						new EmployeeManager(getShopEmployees())
+				)
 		));
 
 		setShopEmployees(List.of(

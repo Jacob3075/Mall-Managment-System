@@ -1,8 +1,10 @@
 package mall;
 
+import employee_managment.EmployeeManager;
 import floor.NormalFloor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import shop_items.ItemManager;
 import shops.ClothsShop;
 import shops.Shop;
 import states.mallstates.ClosedMall;
@@ -10,6 +12,8 @@ import states.mallstates.MaintainMall;
 import states.mallstates.OpenMall;
 import states.mallstates.RenovateMall;
 import utils.Getters;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -54,7 +58,8 @@ class MallTest {
 				1000,
 				2000,
 				20,
-				Getters.getShopEmployees()
+				new ItemManager(List.of()),
+				new EmployeeManager(Getters.getShopEmployees())
 		);
 	}
 
