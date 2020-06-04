@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/shops/ShopsCommon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shop_items/ItemManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop_items/ItemManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shops/ClothsShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shops/ClothsShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ItemsStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ItemsStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shops/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shops/Shop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/utils" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/shops" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -189,7 +189,7 @@
       <workItem from="1590554034483" duration="2025000" />
       <workItem from="1591200197940" duration="442000" />
       <workItem from="1591245853448" duration="5090000" />
-      <workItem from="1591284580823" duration="4646000" />
+      <workItem from="1591284580823" duration="6124000" />
     </task>
     <task id="LOCAL-00001" summary="Changed project to not use Maven">
       <created>1590384206671</created>
@@ -359,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591286435653</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Updated ItemManager and ClothsShop. Added functions to ItemsStream">
+      <created>1591289438434</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1591289438434</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +408,8 @@
     <MESSAGE value="Added new Floor type, FoodCourt." />
     <MESSAGE value="Added the basics to implement Item system for shops. Created Item interface, ItemImpl class and simple ItemManager class" />
     <MESSAGE value="Updated Item and ItemManager all Shop implementations and uses.&#10;Added ItemsStream.&#10;Updated all the tests so that it compiles after the changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Item and ItemManager all Shop implementations and uses.&#10;Added ItemsStream.&#10;Updated all the tests so that it compiles after the changes" />
+    <MESSAGE value="Updated ItemManager and ClothsShop. Added functions to ItemsStream" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ItemManager and ClothsShop. Added functions to ItemsStream" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -419,10 +427,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="100" y="130" width="1166" height="538" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.30.1366.738@0.30.1366.738" timestamp="1590427004197" />
-    <state x="491" y="107" width="565" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1591250332266">
+    <state x="491" y="107" width="565" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1591290639353">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="491" y="107" width="565" height="584" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1591250332266" />
+    <state x="491" y="107" width="565" height="585" key="#com.intellij.ide.util.MemberChooser/0.30.1366.738@0.30.1366.738" timestamp="1591290639353" />
     <state x="390" y="152" width="576" height="495" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1590554967816">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -431,6 +439,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="250" y="30" width="856" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1366.738@0.30.1366.738" timestamp="1591285316911" />
+    <state x="518" y="161" width="500" height="478" key="#toString()_Generation_Settings" timestamp="1591290637325">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="518" y="161" width="500" height="478" key="#toString()_Generation_Settings/0.30.1366.738@0.30.1366.738" timestamp="1591290637325" />
     <state x="100" y="130" width="1166" height="538" key="DiffContextDialog" timestamp="1590474585130">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -471,10 +483,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="278" y="135" width="800" height="529" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1591203487370" />
-    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog" timestamp="1591247945741">
+    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog" timestamp="1591289651645">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog/0.30.1366.738@0.30.1366.738" timestamp="1591247945741" />
+    <state x="491" y="179" width="374" height="440" key="chooseDestDirectoryDialog/0.30.1366.738@0.30.1366.738" timestamp="1591289651645" />
     <state x="392" y="293" width="572" height="229" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590383197450">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
