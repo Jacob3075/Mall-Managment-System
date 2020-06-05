@@ -19,8 +19,8 @@ public abstract class ShopsCommon implements Shop {
 
 	public ShopsCommon(
 			String shopName,
-			int revenue,
 			int rent,
+			int revenue,
 			int shopFloorArea,
 			ItemManager itemManager,
 			EmployeeManager employeeManager

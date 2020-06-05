@@ -1,12 +1,9 @@
 package shop_items;
 
 public class ItemImpl implements Item {
-	private String name;
-	private int    price;
-	private int    count;
-
-	public ItemImpl() {
-	}
+	private final String name;
+	private       int    price;
+	private       int    count;
 
 	public ItemImpl(String name, int price, int count) {
 		this.name = name;
@@ -52,21 +49,6 @@ public class ItemImpl implements Item {
 		return this;
 	}
 
-	public Item setName(String name) {
-		this.name = name;
-		return this;
-	}
-
-	public Item setPrice(int price) {
-		this.price = price;
-		return this;
-	}
-
-	public Item setCount(int count) {
-		this.count = count;
-		return this;
-	}
-
 	@Override
 	public String toString() {
 		return "ItemImpl{" +
@@ -76,5 +58,9 @@ public class ItemImpl implements Item {
 				       '}';
 	}
 
-
+	@Override
+	public ItemImpl setPrice(int price) {
+		this.price = price;
+		return this;
+	}
 }

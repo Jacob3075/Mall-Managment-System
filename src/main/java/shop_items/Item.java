@@ -15,4 +15,6 @@ public interface Item {
 	Item sellItem();
 
 	Item sellItems(int count);
+
+	ItemImpl setPrice(int price);
 }
