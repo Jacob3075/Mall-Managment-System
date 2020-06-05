@@ -4,7 +4,6 @@ import shop_items.Item;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,10 +14,6 @@ public class ItemsStream implements ForwardingStream<Item> {
 
 	public ItemsStream(Stream<Item> itemStream) {
 		this.itemStream = itemStream;
-	}
-
-	public Optional<Item> findItem(String itemName) {
-		return this.getStream().filter(item -> item.getName().equals(itemName)).findFirst();
 	}
 
 	@Override

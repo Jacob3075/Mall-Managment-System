@@ -106,6 +106,12 @@ public abstract class ShopsCommon implements Shop {
 	}
 
 	@Override
+	public Shop addNewItem(Item item) {
+		itemManager = itemManager.addItem(item);
+		return this;
+	}
+
+	@Override
 	public Shop sellItem(String itemName) {
 		itemManager = itemManager.sellItem(itemName, this::increaseRevenue);
 		return this;

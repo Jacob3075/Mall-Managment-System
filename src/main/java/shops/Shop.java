@@ -26,6 +26,8 @@ public interface Shop {
 
 	Shop addItems(String itemName, int count);
 
+	Shop addNewItem(Item item);
+
 	Shop sellItem(String itemName);
 
 	Shop sellItems(String itemName, int count);

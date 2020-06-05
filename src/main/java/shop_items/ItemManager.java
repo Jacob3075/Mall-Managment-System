@@ -4,12 +4,13 @@ import utils.ItemsStream;
 
 import java.security.InvalidParameterException;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.IntConsumer;
 import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
 
 public class ItemManager {
-	private List<Item> items;
+	private final List<Item> items;
 
 	public ItemManager(List<Item> items) {
 		this.items = items;
@@ -19,16 +20,14 @@ public class ItemManager {
 		return items;
 	}
 
-	public ItemManager setItems(List<Item> items) {
-		this.items = items;
+	public ItemManager removeItem(String itemName) {
+		this.findItem(itemName)
+		    .ifPresent(this.items::remove);
 		return this;
 	}
 
-	public ItemManager removeItem(String itemName) {
-		this.stream()
-		    .findItem(itemName)
-		    .ifPresent(item -> this.items.remove(item));
-		return this;
+	public Optional<Item> findItem(String itemName) {
+		return this.stream().filter(item -> item.getName().equals(itemName)).findFirst();
 	}
 
 	public ItemsStream stream() {
@@ -40,8 +39,7 @@ public class ItemManager {
 	}
 
 	public ItemManager sellItems(String itemName, int count, IntConsumer intConsumer) {
-		this.stream()
-		    .findItem(itemName)
+		this.findItem(itemName)
 		    .ifPresentOrElse(
 				    item -> {
 					    intConsumer.accept(item.getPrice() * count);
@@ -60,23 +58,19 @@ public class ItemManager {
 	}
 
 	public ItemManager increaseItemCount(String itemName, int count) {
-		this.stream()
-		    .findItem(itemName)
+		this.findItem(itemName)
 		    .ifPresentOrElse(
 				    item -> item.addItems(count),
-				    () -> this.addItem(
-						    new ItemImpl(
-								    itemName,
-								    0,
-								    1
-						    )
-				    )
+				    () -> {
+					    throw new InvalidParameterException(itemName + " not found");
+				    }
 		    );
 		return this;
 	}
 
-	public void addItem(Item item) {
-		if (this.stream().findItem(item.getName()).isEmpty()) this.items.add(item);
+	public ItemManager addItem(Item item) {
+		if (this.findItem(item.getName()).isEmpty()) this.items.add(item);
+		return this;
 	}
 
 	@Override
