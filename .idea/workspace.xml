@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b78bd1c-fe99-435a-9a64-fb7f13db37ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/shop_items/ItemManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shop_items/ItemManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop_items/ItemManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shops/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shops/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shops/ShopsCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shops/ShopsCommon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ItemsStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ItemsStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/shop_items/ItemManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/shop_items/ItemManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +215,8 @@
       <workItem from="1591200197940" duration="442000" />
       <workItem from="1591245853448" duration="5090000" />
       <workItem from="1591284580823" duration="6412000" />
-      <workItem from="1591371536753" duration="5280000" />
+      <workItem from="1591371536753" duration="5313000" />
+      <workItem from="1591418552477" duration="1660000" />
     </task>
     <task id="LOCAL-00001" summary="Changed project to not use Maven">
       <created>1590384206671</created>
@@ -409,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591373346724</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added ItemManagerTest and made modifications to Shop and ShopsCommon.&#10;Moved findItem function form ItemsStream to ItemManager">
+      <created>1591376992685</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1591376992685</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +459,8 @@
     <MESSAGE value="Updated ItemManager and ClothsShop. Added functions to ItemsStream" />
     <MESSAGE value="Restructured Shop implementations to use ShopsCommon abstract class to add all common functionality to it to  unclutter concrete shops and reduce repetition." />
     <MESSAGE value="Added ItemImplTest and made modifications to Item and ItemImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ItemImplTest and made modifications to Item and ItemImpl" />
+    <MESSAGE value="Added ItemManagerTest and made modifications to Shop and ShopsCommon.&#10;Moved findItem function form ItemsStream to ItemManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ItemManagerTest and made modifications to Shop and ShopsCommon.&#10;Moved findItem function form ItemsStream to ItemManager" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -496,38 +502,38 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="100" y="130" width="1166" height="538" key="DiffContextDialog/0.30.1366.738@0.30.1366.738" timestamp="1590474585130" />
-    <state width="1324" height="219" key="GridCell.Tab.0.bottom" timestamp="1591376477511">
+    <state width="1324" height="186" key="GridCell.Tab.0.bottom" timestamp="1591420147317">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1324" height="219" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1591376477511" />
-    <state width="1324" height="219" key="GridCell.Tab.0.center" timestamp="1591376477509">
+    <state width="1324" height="186" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1591420147317" />
+    <state width="1324" height="186" key="GridCell.Tab.0.center" timestamp="1591420147315">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1324" height="219" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1591376477509" />
-    <state width="1324" height="219" key="GridCell.Tab.0.left" timestamp="1591376477507">
+    <state width="1324" height="186" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1591420147315" />
+    <state width="1324" height="186" key="GridCell.Tab.0.left" timestamp="1591420147314">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1324" height="219" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1591376477507" />
-    <state width="1324" height="219" key="GridCell.Tab.0.right" timestamp="1591376477510">
+    <state width="1324" height="186" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1591420147314" />
+    <state width="1324" height="186" key="GridCell.Tab.0.right" timestamp="1591420147316">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1324" height="219" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1591376477510" />
-    <state width="1324" height="219" key="GridCell.Tab.1.bottom" timestamp="1591376477512">
+    <state width="1324" height="186" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1591420147316" />
+    <state width="1324" height="219" key="GridCell.Tab.1.bottom" timestamp="1591377014837">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1324" height="219" key="GridCell.Tab.1.bottom/0.30.1366.738@0.30.1366.738" timestamp="1591376477512" />
-    <state width="1324" height="219" key="GridCell.Tab.1.center" timestamp="1591376477512">
+    <state width="1324" height="219" key="GridCell.Tab.1.bottom/0.30.1366.738@0.30.1366.738" timestamp="1591377014837" />
+    <state width="1324" height="219" key="GridCell.Tab.1.center" timestamp="1591377014836">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1324" height="219" key="GridCell.Tab.1.center/0.30.1366.738@0.30.1366.738" timestamp="1591376477512" />
-    <state width="1324" height="219" key="GridCell.Tab.1.left" timestamp="1591376477511">
+    <state width="1324" height="219" key="GridCell.Tab.1.center/0.30.1366.738@0.30.1366.738" timestamp="1591377014836" />
+    <state width="1324" height="219" key="GridCell.Tab.1.left" timestamp="1591377014836">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1324" height="219" key="GridCell.Tab.1.left/0.30.1366.738@0.30.1366.738" timestamp="1591376477511" />
-    <state width="1324" height="219" key="GridCell.Tab.1.right" timestamp="1591376477512">
+    <state width="1324" height="219" key="GridCell.Tab.1.left/0.30.1366.738@0.30.1366.738" timestamp="1591377014836" />
+    <state width="1324" height="219" key="GridCell.Tab.1.right" timestamp="1591377014836">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1324" height="219" key="GridCell.Tab.1.right/0.30.1366.738@0.30.1366.738" timestamp="1591376477512" />
+    <state width="1324" height="219" key="GridCell.Tab.1.right/0.30.1366.738@0.30.1366.738" timestamp="1591377014836" />
     <state x="501" y="336" width="354" height="127" key="ReplaceDuplicatesPrompt" timestamp="1590507278610">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

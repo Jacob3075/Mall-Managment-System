@@ -3,6 +3,7 @@ package shop_items;
 import utils.ItemsStream;
 
 import java.security.InvalidParameterException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.IntConsumer;
@@ -10,10 +11,10 @@ import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
 
 public class ItemManager {
-	private final List<Item> items;
+	private final ArrayList<Item> items;
 
 	public ItemManager(List<Item> items) {
-		this.items = items;
+		this.items = new ArrayList<>(items);
 	}
 
 	public List<Item> getItems() {
@@ -34,15 +35,15 @@ public class ItemManager {
 		return new ItemsStream(this.items.stream());
 	}
 
-	public ItemManager sellItem(String itemName, IntConsumer intConsumer) {
-		return this.sellItems(itemName, 1, intConsumer);
+	public ItemManager sellItem(String itemName, IntConsumer revenueConsumer) {
+		return this.sellItems(itemName, 1, revenueConsumer);
 	}
 
-	public ItemManager sellItems(String itemName, int count, IntConsumer intConsumer) {
+	public ItemManager sellItems(String itemName, int count, IntConsumer revenueConsumer) {
 		this.findItem(itemName)
 		    .ifPresentOrElse(
 				    item -> {
-					    intConsumer.accept(item.getPrice() * count);
+					    revenueConsumer.accept(item.getPrice() * count);
 					    item.sellItems(count);
 				    },
 				    () -> {

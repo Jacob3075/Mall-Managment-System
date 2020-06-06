@@ -18,6 +18,7 @@ class ItemManagerTest {
 			new ItemImpl("Item2", 25, 2)
 	);
 	private static ItemManager itemManager = new ItemManager(List.copyOf(items));
+	private static int         revenue     = 0;
 
 	@BeforeEach
 	void setUp() {
@@ -27,6 +28,8 @@ class ItemManagerTest {
 				new ItemImpl("Item3", 25, 2)
 		);
 		itemManager = new ItemManager(List.copyOf(items));
+		int revenue = 0;
+
 	}
 
 	@Test
@@ -37,11 +40,37 @@ class ItemManagerTest {
 				6,
 				itemManager.findItem("Item1").get().getCount()
 		);
+
 		assertThrows(
 				InvalidParameterException.class,
 				() -> itemManager.increaseItemCount("Item4")
 		);
 
+		itemManager = itemManager.increaseItemCount("Item2", 5);
+		assertEquals(
+				6,
+				itemManager.findItem("Item2").get().getCount()
+		);
+
+		itemManager = itemManager.removeItem("Item3");
+		assertTrue(itemManager.findItem("Item3").isEmpty());
+		assertTrue(itemManager.findItem("Item4").isEmpty());
+
+		itemManager = itemManager.addItem(new ItemImpl("Item4", 10, 2));
+		itemManager = itemManager.sellItems(
+				"Item4",
+				2,
+				this::increaseRevenue
+		);
+		assertEquals(
+				0,
+				itemManager.findItem("Item4").get().getCount()
+		);
+		assertEquals(20, revenue);
+	}
+
+	private void increaseRevenue(int price) {
+		revenue += price;
 	}
 
 	@Test
